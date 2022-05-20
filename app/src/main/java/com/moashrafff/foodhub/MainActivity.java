@@ -29,11 +29,10 @@ import com.moashrafff.foodhub.Views.FoodViewModel;
 import com.moashrafff.foodhub.Views.HomeFragment;
 import com.moashrafff.foodhub.Views.signUp;
 import com.moashrafff.foodhub.databinding.ActivityHomeScreenBinding;
-import com.moashrafff.foodhub.databinding.ActivityMainBinding;
+
 import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnItemSelectedListener {
@@ -72,10 +71,11 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
 //            }
 //        });
         binding.btmNavBar.setItemSelected(R.id.bottm_nav_dash_board,true);
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,new HomeFragment()).commit();
         bottomNav();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
 
 
@@ -97,21 +97,22 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
         ,createItemFor(Constants.POS_MY_PROFILE)
         ,createItemFor(Constants.POS_DEL_ADD)
         ,createItemFor(Constants.POS_PAY_MET)
-        ,createItemFor(Constants.POS_CONTACT_US)
+        ,createItemFor(Constants.POS_CONTACT_US).setChecked(true)
         ,createItemFor(Constants.POS_SET)
         ,createItemFor(Constants.POS_HELP)
         ,new SpaceItem(260)
         ,createItemFor(Constants.POS_LOG_OUT)
         ));
 
-        adapter.setListener(this);
+
 
         RecyclerView list = findViewById(R.id.drawer_list);
         list.setNestedScrollingEnabled(false);
         list.setLayoutManager(new LinearLayoutManager(this));
         list.setAdapter(adapter);
 
-        adapter.setSelected(Constants.POS_MY_PROFILE);
+        adapter.setSelected(Constants.POS_CONTACT_US);
+        adapter.setListener(this);
 
     }
 
@@ -119,9 +120,13 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
         return new SimpleItem(screenIcons[position],screenTitles[position])
                 .withTextTint(R.color.auth_color)
                 .withSelectedTextTint(R.color.btn_color);
-
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 
     private String[] loadScreenTitles() {
         return getResources().getStringArray(R.array.activityScreenTitles);
@@ -161,7 +166,7 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
                         break;
 
                 }
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
             }
         });
     }
@@ -173,6 +178,9 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
         if (position == Constants.POS_MY_PROFILE){
             CartFragment fragment = new CartFragment();
             transaction.replace(R.id.container,fragment);
+        }else if (position == Constants.POS_PAY_MET) {
+            signUp fragment = new signUp();
+            transaction.replace(R.id.container, fragment);
         }
 
         slidingRootNav.closeMenu();

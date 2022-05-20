@@ -1,12 +1,207 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
+
+    <!--  background  -->
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/welcome_screen_background"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:src="@drawable/welcome_screen_background" />
+
+    <!-- Sign In-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/shadow_shape" />
+
+    <LinearLayout
+        android:id="@+id/lbl_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="70dp"
+        android:layout_marginBottom="54dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/sofia_regular"
+            android:gravity="center"
+            android:text="Already have an account?"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/sofia_regular"
+            android:gravity="center"
+            android:text="@string/sign_in"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lbl_sign_in"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginBottom="28dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="5dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/btn_welcome_facebook"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/links_btn_shape"
+                android:drawableLeft="@drawable/google_icon"
+                android:fontFamily="@font/sofia_regular"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Facebook"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                app:backgroundTint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/btn_welcome_google"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/links_btn_shape"
+                android:drawableLeft="@drawable/facebook_icon"
+                android:fontFamily="@font/sofia_regular"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Google"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                app:backgroundTint="@color/white" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/auth_em_ph_shape"
+            android:fontFamily="@font/sofia_regular"
+            android:gravity="center_horizontal"
+            android:lines="1"
+            android:onClick="Click"
+            android:paddingVertical="18dp"
+            android:text="Start with email or phone"
+            android:textColor="#FEFEFE"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_lbl_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/linear_login"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginBottom="19dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="22dp"
+            android:layout_weight="1"
+            android:background="@color/white" />
+
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:fontFamily="@font/sofia_meduim"
+            android:gravity="center"
+            android:text="sign in with"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="22dp"
+            android:layout_weight="1"
+            android:background="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linear_lbl_sign_in"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="37dp"
+        android:layout_marginBottom="170dp"
+        android:orientation="vertical">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/sofia_bold"
+            android:lineSpacingExtra="10dp"
+            android:lines="2"
+            android:text="@string/welcome_to_nfoodhub"
+            android:textColor="@color/black"
+            android:textSize="53sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/sofia_regular"
+            android:lineSpacingExtra="8dp"
+            android:lines="2"
+            android:text="Your favourite foods delivered  \nfast at your door."
+            android:textColor="#30384F"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginEnd="-10dp"
+        android:fontFamily="@font/sofia_regular"
+        android:src="@drawable/ic_skip" />
+
 
 </RelativeLayout>

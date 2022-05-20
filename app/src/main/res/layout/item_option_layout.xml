@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="10dp"
+    android:padding="20dp"
 
     >
 
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/sofia_regular"
         android:text="My Orders"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:textColor="@color/black"
         android:gravity="center"
         />

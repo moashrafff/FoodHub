@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="activityScreenTitles" >
-        <item></item>
         <item>My Orders</item>
         <item>My Profile</item>
         <item>Delivery Adress</item>
@@ -11,6 +10,7 @@
         <item>Helps &amp; FAQs</item>
         <item/>
         <item>Log Out</item>
+
     </string-array>
 
     <array name="activityScreenIcons">
@@ -21,5 +21,7 @@
         <item>@drawable/contact_us_icon</item>
         <item>@drawable/settings_icon</item>
         <item>@drawable/helps_icon</item>
+        <item>0</item>
+        <item>@drawable/logout_icon</item>
     </array>
 </resources>
