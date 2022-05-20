@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="auth_email_hint">Your email or phone</string>
+    <string name="facebook_btn_text">Facebook</string>
+    <string name="forget_password_text">Forget Password?</string>
+    <string name="login_text">Login</string>
+</resources>

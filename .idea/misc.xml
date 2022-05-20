@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/drawable-v24/profile_shape.xml" value="0.2075" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/drawable-v24/restaurant_item_like_shape.xml" value="0.2075" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/drawable/add_btn_shape.xml" value="0.2075" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/drawable/btn_style.xml" value="0.2075" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/drawable/categories_style.xml" value="0.1125" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/drawable/category_text_view_shape.xml" value="0.2075" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/drawable/filter_shape.xml" value="0.2075" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/drawable/food_item_image_shape.xml" value="0.2075" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/drawable/food_item_like_shape.xml" value="0.2075" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/drawable/food_item_text_view_shape.xml" value="0.2075" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/drawable/links_btn_shape.xml" value="0.2245" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/drawable/login_btn_shape.xml" value="0.2245" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/drawable/restaurant_header_image_view_shape.xml" value="0.2075" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/drawable/search_food_linear_shape.xml" value="0.2075" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/drawable/search_rate_image_shape.xml" value="0.2075" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/drawable/search_shap.xml" value="0.2075" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/drawable/show_password_selector.xml" value="0.2245" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/drawable/subtract_btn_shape.xml" value="0.2075" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/activity_cart.xml" value="0.2421875" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/activity_home_screen.xml" value="0.2" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/activity_main.xml" value="0.2421875" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/add_new_card_screen.xml" value="0.264" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/auth_login_screen.xml" value="0.10400000000000001" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/auth_registration_screen.xml" value="0.2421875" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/auth_sign_up_screen.xml" value="0.2421875" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/auth_verification_code.xml" value="0.2421875" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/back_header.xml" value="0.2421875" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/cart_item.xml" value="0.2421875" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/categories_item.xml" value="0.2421875" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/categories_style.xml" value="0.2421875" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/drawer_menu_layout.xml" value="0.24114583333333334" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/food_details_item.xml" value="0.5703245749613601" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/food_details_screen.xml" value="0.264" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/food_item.xml" value="0.2" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/food_search_screen.xml" value="0.264" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/fragment_blank.xml" value="0.2421875" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/fragment_dashboard.xml" value="0.2421875" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/fragment_home.xml" value="0.2421875" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/fragment_home_screen.xml" value="0.2421875" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/item_option_layout.xml" value="0.2" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/login_screen.xml" value="0.264" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/main_header.xml" value="0.264" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/my_profile_screen.xml" value="0.2" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/popular_item.xml" value="0.2421875" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/resset_password_screen.xml" value="0.2421875" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/restaurant_item.xml" value="0.5857142857142857" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/restaurant_profile_screen.xml" value="0.2421875" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/search_screen.xml" value="0.264" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/sign_up_screen.xml" value="0.2421875" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/splash_screen.xml" value="0.2421875" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/welcome_screen.xml" value="0.2421875" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2421875" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

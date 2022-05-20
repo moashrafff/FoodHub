@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.github.siyamed.shapeimageview.RoundedImageView
+        android:id="@+id/food_item_image"
+        android:layout_width="match_parent"
+        android:layout_height="205dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ground_beef_tacos"
+        app:siRadius="15dp" />
+
+    <com.moashrafff.foodhub.Views.Components.MainHeader
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        app:mh_image2="@drawable/like_icon"
+        app:mh_image2_color="@color/btn_color"
+        app:mh_image2_radius="50" />
+
+    <TextView
+        android:id="@+id/food_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/food_item_image"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/sofia_bold"
+        android:text="@string/food_item_name"
+        android:textColor="@color/black"
+        android:textSize="31sp" />
+
+    <LinearLayout
+        android:id="@+id/rate_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/food_item_name"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/rate_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/sofia_semi_bold"
+            android:text="4.5"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/sofia_regular"
+            android:text="(30+)"
+            android:textColor="#9796A1"
+            android:textSize="14sp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sofia_regular"
+            android:text="See Review"
+            android:textColor="@color/btn_color"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/add_subtract_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rate_linear"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="$9.50"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal"
+
+            >
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/subtract_btn_shape"
+                android:elevation="2dp"
+                android:padding="10dp"
+                android:src="@drawable/subtract_btn_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/sofia_semi_bold"
+                android:text="02"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="7dp"
+                android:background="@drawable/add_btn_shape"
+                android:elevation="2dp"
+                android:padding="10dp"
+                android:src="@drawable/add_btn_icon"
+                android:clickable="true"
+                />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/food_details_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_subtract_layout"
+        android:layout_marginHorizontal="10dp"
+        android:fontFamily="@font/sofia_regular"
+        android:paddingVertical="10dp"
+        android:text="Brown the beef better. Lean ground beef – I like to use 85% lean angus. Garlic – use fresh  chopped. Spices – chili powder, cumin, onion powder."
+        android:textColor="#9796A1"
+        android:textSize="15sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/add_to_cart_button"
+        android:layout_below="@+id/food_details_text_view"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sofia_bold"
+            android:text="Choice of Add On"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/food_details_item" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/add_to_cart_button"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp">
+
+        <com.moashrafff.foodhub.Views.Widget.MainButton
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="5dp"
+            android:drawableStart="@drawable/add_to_cart_icon"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:text="ADD TO CART" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

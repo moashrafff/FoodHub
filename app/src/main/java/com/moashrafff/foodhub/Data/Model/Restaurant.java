@@ -1,0 +1,17 @@
+package com.moashrafff.foodhub.Data.Model;
+
+public class Restaurant {
+    public String id;
+    public String name;
+    public String pic;
+    public String delivery;
+    public String delivery_time;
+    public String tags;
+    public String rating;
+    public String cover_photo;
+    public String verified;
+    public String number_of_ratings;
+    public String address;
+    public String lat;
+    public String lng;
+}

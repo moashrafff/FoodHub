@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="InputField">
+        <attr name="if_label" format="string"/>
+        <attr name="if_hint" format="string"/>
+        <attr format="reference" name="passwordToggleDrawable"/>
+    </declare-styleable>
+
+    <declare-styleable name="MainHeader">
+        <attr name="mh_text_view" format="string"/>
+        <attr name="mh_image2" format="reference"/>
+        <attr name="mh_image2_color" format="color"/>
+        <attr name="mh_image2_radius" format="integer"/>
+    </declare-styleable>
+</resources>

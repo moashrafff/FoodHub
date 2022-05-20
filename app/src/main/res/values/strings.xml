@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Food Hub</string>
+    <string name="auth_email_hint">Your email or phone</string>
+    <string name="auth_password_hint">Password</string>
+    <string name="facebook_btn_text">Facebook</string>
+    <string name="google_btn_text">Google</string>
+    <string name="sign_in_with_text">Sign in with</string>
+    <string name="sign_up_text">Sign Up</string>
+    <string name="don_t_have_an_account_text">Don\'t have an account?</string>
+    <string name="forget_password_text">Forget Password?</string>
+    <string name="password_text">Password</string>
+    <string name="e_mail_text">E-mail</string>
+    <string name="login_text">Login</string>
+    <string name="already_have_an_account_text">Already have an account?</string>
+    <string name="resset_password_text">Resset Password</string>
+    <string name="food_item_name">Ground Beef Tacos</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

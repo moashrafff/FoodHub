@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/auth_bg"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:id="@+id/main_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="75dp"
+        android:fontFamily="@font/sofia_semi_bold"
+        android:text="@string/sign_up_text"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/main_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_label"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sofia_regular"
+            android:text="Full Name"
+            android:textColor="@color/auth_color"
+            android:textSize="20sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="5dp"
+            android:textColorHint="@color/auth_hint_color"
+            android:theme="@style/LoginTextInputLayoutStyle"
+            app:boxCornerRadiusBottomEnd="5dp"
+            app:boxCornerRadiusBottomStart="5dp"
+            app:boxCornerRadiusTopEnd="5dp"
+            app:boxCornerRadiusTopStart="5dp"
+            app:boxStrokeColor="@color/btn_color"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:helperText="Required"
+            app:helperTextEnabled="true"
+            app:helperTextTextColor="@color/btn_color"
+            app:hintTextColor="@color/auth_hint_color"
+            app:placeholderTextColor="@color/btn_color"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/sofia_regular"
+                android:hint="@string/auth_email_hint"
+                android:maxLines="1"
+                app:hintTextColor="@color/auth_hint_color" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/sofia_regular"
+            android:text="@string/e_mail_text"
+            android:textColor="@color/auth_color"
+            android:textSize="20sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="5dp"
+            android:textColorHint="@color/auth_hint_color"
+            android:theme="@style/LoginTextInputLayoutStyle"
+            app:boxCornerRadiusBottomEnd="5dp"
+            app:boxCornerRadiusBottomStart="5dp"
+            app:boxCornerRadiusTopEnd="5dp"
+            app:boxCornerRadiusTopStart="5dp"
+            app:boxStrokeColor="@color/btn_color"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:helperText="Required"
+            app:helperTextEnabled="true"
+            app:helperTextTextColor="@color/btn_color"
+            app:hintTextColor="@color/auth_hint_color"
+            app:placeholderTextColor="@color/btn_color"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/sofia_regular"
+                android:hint="@string/auth_email_hint"
+                android:maxLines="1"
+                app:hintTextColor="@color/auth_hint_color" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/sofia_regular"
+            android:text="@string/password_text"
+            android:textColor="@color/auth_color"
+            android:textSize="20sp"
+
+            />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="5dp"
+            android:textColorHint="@color/auth_hint_color"
+            app:boxCornerRadiusBottomEnd="5dp"
+            app:boxCornerRadiusBottomStart="5dp"
+            app:boxCornerRadiusTopEnd="5dp"
+            app:boxCornerRadiusTopStart="5dp"
+            app:boxStrokeColor="@color/btn_color"
+            app:boxStrokeWidth="1dp"
+            app:hintTextColor="@color/auth_hint_color"
+            app:passwordToggleDrawable="@drawable/show_password_selector"
+            app:passwordToggleEnabled="true"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/sofia_regular"
+                android:hint="@string/auth_password_hint"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                app:hintTextColor="@color/auth_hint_color" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.moashrafff.foodhub.Views.Widget.MainButton
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/sign_up_text"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sofia_meduim"
+                android:text="@string/already_have_an_account_text"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/sign_uup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/sofia_meduim"
+                android:text="@string/login_text"
+                android:textColor="@color/btn_color"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

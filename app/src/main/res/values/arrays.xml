@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="activityScreenTitles" >
+        <item></item>
+        <item>My Orders</item>
+        <item>My Profile</item>
+        <item>Delivery Adress</item>
+        <item>Payment Method</item>
+        <item>Contact Us</item>
+        <item>Settings</item>
+        <item>Helps &amp; FAQs</item>
+        <item/>
+        <item>Log Out</item>
+    </string-array>
+
+    <array name="activityScreenIcons">
+        <item>@drawable/my_orders_icon</item>
+        <item>@drawable/myprofile_icon</item>
+        <item>@drawable/delivery_adress_icon</item>
+        <item>@drawable/payment_method_icon</item>
+        <item>@drawable/contact_us_icon</item>
+        <item>@drawable/settings_icon</item>
+        <item>@drawable/helps_icon</item>
+    </array>
+</resources>
