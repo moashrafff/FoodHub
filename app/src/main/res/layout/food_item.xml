@@ -37,10 +37,11 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/food_item_text_view_shape"
+                android:fontFamily="@font/tt_commons"
                 android:gravity="center"
                 android:text="$ 9.50"
                 android:textColor="@color/black"
-                android:fontFamily="@font/tt_commons"
+                android:id="@+id/food_price"
                 />
 
             <LinearLayout
@@ -71,12 +72,13 @@
             android:layout_marginTop="134dp"
             android:background="@drawable/food_item_text_view_shape"
             android:elevation="2dp"
+            android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center"
+            android:padding="5dp"
             android:text="4.5 (25+)"
             android:textColor="@color/black"
-            android:padding="5dp"
             android:textSize="10dp"
-            android:fontFamily="sans-serif-condensed-medium"
+            android:id="@+id/food_rate"
             />
 
         <LinearLayout
@@ -94,7 +96,7 @@
                 android:fontFamily="@font/sofia_regular"
                 android:text="Greek Salad"
                 android:textColor="@color/black"
-
+                android:id="@+id/food_name"
                 />
 
             <TextView
@@ -103,7 +105,7 @@
                 android:fontFamily="@font/sofia_regular"
                 android:text="with baked salmon"
                 android:textColor="#5B5B5E"
-
+                android:id="@+id/food_des"
                 />
 
         </LinearLayout>

@@ -1,98 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="154.5dp"
     android:layout_height="216dp"
-    android:padding="10dp"
+    android:elevation="2dp"
     android:layout_marginEnd="10dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    >
 
-    <com.github.siyamed.shapeimageview.RoundedImageView
-        android:id="@+id/popular_img"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="136dp"
-        android:src="@drawable/popular_img"
-        app:riv_corner_radius="15dp" />
+        android:layout_height="match_parent"
+        >
 
-    <LinearLayout
-        android:layout_width="58dp"
-        android:layout_margin="10dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:background="@drawable/btn_style"
-        android:layout_height="28dp">
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:id="@+id/popular_img"
+            android:layout_width="match_parent"
+            android:layout_height="136dp"
+            android:src="@drawable/popular_img"
+            app:riv_corner_radius="15dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:text="4.5"
-            android:textColor="@color/black"
-            android:id="@+id/popular_price"
-            android:textSize="20dp"
-            android:fontFamily="@font/sofia_regular"
-            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="58dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_style"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/popular_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sofia_regular"
+                android:text="4.5"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                />
 
 
-    </LinearLayout>
-
-    <com.github.siyamed.shapeimageview.RoundedImageView
-        android:layout_width="28dp"
-        android:src="@drawable/like_icon"
-        android:layout_margin="10dp"
-        android:layout_alignParentRight="true"
-        android:layout_height="28dp" />
-
-    <LinearLayout
-        android:layout_width="59dp"
-        android:layout_height="24dp"
-        android:layout_centerInParent="true"
-        android:background="@drawable/btn_style"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:translationX="-25dp"
-        android:translationY="30dp">
+        </LinearLayout>
 
         <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:padding="1dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/like_icon" />
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
-            android:src="@drawable/star" />
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_style"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:translationY="30dp"
+            android:layout_marginStart="10dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="3dp"
+                android:src="@drawable/star" />
+
+            <TextView
+                android:id="@+id/popular_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sofia_semi_bold"
+                android:text="4.5"
+                android:textColor="@color/black"
+                android:layout_marginEnd="3dp"
+                />
+
+            <TextView
+                android:id="@+id/ratings_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(25)"
+                android:textSize="8dp"
+                android:layout_marginEnd="3dp"
+                />
+
+
+        </LinearLayout>
+
 
         <TextView
-            android:id="@+id/popular_rating"
+            android:id="@+id/popular_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/popular_img"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/sofia_semi_bold"
-            android:text="4.5"
-            android:textColor="@color/black" />
+            android:text="Salmon Salad"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
 
         <TextView
+
+            android:id="@+id/poplar_dis"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="(25)"
-            android:textSize="8dp" />
+            android:layout_below="@+id/popular_title"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/sofia_light"
+            android:text="Baked Salmon Fish"
+            android:textSize="12dp" />
+
+    </RelativeLayout>
 
 
-    </LinearLayout>
 
 
-    <TextView
-        android:id="@+id/popular_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/popular_img"
-        android:layout_marginTop="5dp"
-        android:fontFamily="@font/sofia_semi_bold"
-        android:text="Salmon Salad"
-        android:textColor="@color/black"
-        android:textSize="15dp" />
-
-    <TextView
-        android:id="@+id/poplar_dis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/popular_title"
-        android:fontFamily="@font/sofia_light"
-        android:text="Baked Salmon Fish"
-        android:textSize="12dp" />
-
-
-</RelativeLayout>
+</androidx.cardview.widget.CardView>

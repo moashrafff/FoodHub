@@ -9,7 +9,9 @@
     <ScrollView
         android:id="@+id/frame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,7 +31,9 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                >
 
 
                 <LinearLayout
@@ -50,7 +54,7 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/search_icon" />
 
-                    <EditText
+                    <TextView
                         android:id="@+id/tvSearch"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -60,19 +64,20 @@
                         android:textColorHint="#9DA4BB"
                         android:textSize="15sp"
                         android:maxLines="1"
+                        android:hint="Find for food or restaurant..."
                         />
                 </LinearLayout>
 
                 <ImageView
+                    android:layout_marginVertical="5dp"
                     android:id="@+id/ivFilter"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginEnd="20dp"
                     android:background="@drawable/filter_shape"
-                    android:elevation="2dp"
-                    android:padding="10dp"
+                    android:elevation="1dp"
+                    android:padding="12dp"
                     android:src="@drawable/filter_icon"
-                    android:visibility="visible"
                     app:layout_constraintBottom_toBottomOf="@+id/linearLayout3"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/linearLayout3" />
@@ -84,9 +89,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="108dp"
                 android:clipToPadding="false"
-                android:padding="10dp"
+                android:paddingHorizontal="10dp"
                 tools:listitem="@layout/categories_item"
-                android:layout_gravity="center"
+
                 />
 
             <TextView

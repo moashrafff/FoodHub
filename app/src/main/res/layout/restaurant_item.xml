@@ -5,6 +5,8 @@
     android:layout_height="175dp"
     app:cardCornerRadius="21dp"
     android:elevation="2dp"
+    android:layout_marginVertical="10dp"
+    android:layout_marginHorizontal="5dp"
     >
 
     <RelativeLayout
@@ -81,7 +83,9 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/sofia_semi_bold"
                     android:text="Star Bucks"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:id="@+id/search_res_name"
+                    />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -89,7 +93,9 @@
                     android:src="@drawable/verification_icon"
                     android:layout_gravity="center"
                     android:layout_marginTop="2dp"
-                    android:layout_marginStart="5dp"/>
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/veri"
+                    />
 
             </LinearLayout>
 
@@ -114,6 +120,7 @@
                     android:textSize="10dp"
                     android:layout_gravity="center"
                     android:layout_marginEnd="10dp"
+                    android:id="@+id/search_res_del"
                     />
 
 
@@ -132,6 +139,7 @@
                     android:text="10-15 mins"
                     android:textSize="10dp"
                     android:layout_gravity="center"
+                    android:id="@+id/search_res_del_time"
                     />
 
 
@@ -174,98 +182,6 @@
     </RelativeLayout>
 
 
-
-
-
-<!--        <RelativeLayout-->
-<!--            android:id="@+id/relativeLayout"-->
-<!--            android:layout_width="150dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="٠dp"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent">-->
-
-<!--            <TextView-->
-<!--                android:layout_width="60dp"-->
-<!--                android:layout_height="30dp"-->
-<!--                android:layout_alignParentStart="true"-->
-<!--                android:layout_marginStart="10dp"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                android:background="@drawable/food_item_text_view_shape"-->
-<!--                android:gravity="center"-->
-<!--                android:text="$ 9.50"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:fontFamily="@font/tt_commons"-->
-<!--                />-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="30dp"-->
-<!--                android:layout_height="30dp"-->
-<!--                android:layout_alignParentEnd="true"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                android:layout_marginEnd="10dp"-->
-<!--                android:layout_marginBottom="10dp"-->
-<!--                android:background="@drawable/food_item_like_shape"-->
-<!--                android:gravity="center">-->
-
-<!--                <ImageView-->
-<!--                    android:layout_width="15dp"-->
-<!--                    android:layout_height="15dp"-->
-<!--                    android:src="@drawable/like_icon" />-->
-<!--            </LinearLayout>-->
-
-
-<!--        </RelativeLayout>-->
-
-<!--        <TextView-->
-<!--            android:layout_width="60dp"-->
-<!--            android:layout_height="30dp"-->
-<!--            android:layout_alignParentStart="true"-->
-<!--            android:layout_alignParentTop="true"-->
-<!--            android:layout_marginStart="10dp"-->
-<!--            android:layout_marginTop="134dp"-->
-<!--            android:background="@drawable/food_item_text_view_shape"-->
-<!--            android:elevation="2dp"-->
-<!--            android:gravity="center"-->
-<!--            android:text="4.5 (25+)"-->
-<!--            android:textColor="@color/black"-->
-<!--            android:padding="5dp"-->
-<!--            android:textSize="10dp"-->
-<!--            android:fontFamily="sans-serif-condensed-medium"-->
-<!--            />-->
-
-<!--        <LinearLayout-->
-<!--            android:id="@+id/food_item_main_linear"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_below="@+id/food_main_image"-->
-<!--            android:layout_marginStart="10dp"-->
-<!--            android:layout_marginTop="20dp"-->
-<!--            android:orientation="vertical">-->
-
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:fontFamily="@font/sofia_regular"-->
-<!--                android:text="Greek Salad"-->
-<!--                android:textColor="@color/black"-->
-
-<!--                />-->
-
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:fontFamily="@font/sofia_regular"-->
-<!--                android:text="with baked salmon"-->
-<!--                android:textColor="#5B5B5E"-->
-
-<!--                />-->
-
-<!--        </LinearLayout>-->
-
-
-<!--    </RelativeLayout>-->
 
 
 </androidx.cardview.widget.CardView>

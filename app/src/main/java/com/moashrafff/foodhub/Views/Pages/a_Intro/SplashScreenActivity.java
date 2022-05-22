@@ -1,15 +1,12 @@
 package com.moashrafff.foodhub.Views.Pages.a_Intro;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.moashrafff.foodhub.MainActivity;
+import com.moashrafff.foodhub.Config.BaseActivity;
 import com.moashrafff.foodhub.R;
 
-public class SplashScreenActivity extends AppCompatActivity {
+public class SplashScreenActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +16,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashScreenActivity.this, WelcomeScreen.class));
+                navigateTo(WelcomeScreen.class);
                 finish();
             }
         },3000);

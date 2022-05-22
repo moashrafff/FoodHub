@@ -1,4 +1,4 @@
-package com.moashrafff.foodhub;
+package com.moashrafff.foodhub.Views.Pages.c_Home;
 
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
@@ -16,11 +16,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
+import com.moashrafff.foodhub.CartFragment;
 import com.moashrafff.foodhub.Config.Constants;
 import com.moashrafff.foodhub.Data.Model.Category;
 import com.moashrafff.foodhub.Data.Model.DrawerItemModel;
 import com.moashrafff.foodhub.Data.Model.Root;
 import com.moashrafff.foodhub.Data.Model.SpaceItem;
+import com.moashrafff.foodhub.R;
 import com.moashrafff.foodhub.Views.Adapters.DrawerAdapter;
 import com.moashrafff.foodhub.Views.Adapters.HomeCategoriesAdapter;
 import com.moashrafff.foodhub.Views.Adapters.SimpleItem;
@@ -44,32 +46,15 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
     private Drawable[] screenIcons;
 
     private SlidingRootNav slidingRootNav;
-
-
-
     ActivityHomeScreenBinding binding;
-    FoodViewModel viewModel;
-    HomeCategoriesAdapter adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
        binding = ActivityHomeScreenBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-//        viewModel = ViewModelProviders.of(this).get(FoodViewModel.class);
-//        viewModel.getRoot();
-//
-//        adapter= new HomeCategoriesAdapter(this);
-////        binding.catLst.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-////        binding.catLst.setAdapter(adapter);
-//
-//        viewModel.roots.observe(this, new Observer<Root>() {
-//            @Override
-//            public void onChanged(Root root) {
-//                Log.e(TAG, "onChanged: "+root.getCategories() );
-//            adapter.setCategories(root.getCategories());
-//            }
-//        });
+
         binding.btmNavBar.setItemSelected(R.id.bottm_nav_dash_board,true);
         getSupportFragmentManager().beginTransaction().replace(R.id.container,new HomeFragment()).commit();
         bottomNav();
@@ -156,7 +141,7 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
                 Fragment fragment = null;
                 switch (i){
                     case R.id.bottm_nav_dash_board:
-                        fragment = new CartFragment();
+                        fragment = new HomeFragment();
                         break;
                     case R.id.shop_nav_dash_board:
                         fragment = new signUp();

@@ -1,8 +1,12 @@
 package com.moashrafff.foodhub.Networking;
 
 import com.moashrafff.foodhub.Config.Constants;
+import com.moashrafff.foodhub.Data.Model.Food;
+import com.moashrafff.foodhub.Data.Model.Restaurant;
 import com.moashrafff.foodhub.Data.Model.Root;
 import com.moashrafff.foodhub.Interfaces.EndPoints;
+
+import java.util.ArrayList;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -30,5 +34,13 @@ public class FoodClient {
 
     public Call<Root> getRoot(){
         return Interface.getRoot(Constants.HomeFeatures);
+    }
+
+    public Call<Food> getFood(){
+        return Interface.getFood(Constants.FoodDetailsFeatures, Constants.FoodDetailsId);
+    }
+
+    public Call<ArrayList<Restaurant>> getSearchRestaurant(){
+        return Interface.getSearchRestaurant(Constants.FoodSearchMethod,Constants.FoodSearchKeyWord);
     }
 }

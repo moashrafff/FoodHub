@@ -15,6 +15,9 @@
             android:name=".Views.Pages.a_Intro.WelcomeScreen"
             android:exported="false" />
         <activity
+            android:name=".Config.BaseActivity"
+            android:exported="false" />
+        <activity
             android:name=".Views.Pages.a_Intro.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
@@ -27,7 +30,7 @@
             android:name=".Views.Registraion_screen"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Views.Pages.c_Home.MainActivity"
             android:exported="true"/>
     </application>
 

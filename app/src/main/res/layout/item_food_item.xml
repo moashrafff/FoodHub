@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="266dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="20dp"
+    android:layout_marginBottom="10dp"
+    android:minWidth="266dp"
+    app:cardCornerRadius="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@null">
+
+            <ImageView
+                android:id="@+id/item_image"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:maxHeight="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ground_beef_tacos" />
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:id="@+id/img_rates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/auth_shape"
+                    android:fontFamily="@font/sofia_semi_bold"
+                    android:padding="3dp"
+                    android:scaleType="centerCrop"
+                    android:text="$10.35"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/restaurant_item_like_shape"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/like_icon" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_view"
+
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="11dp"
+            >
+
+            <TextView
+
+                android:id="@+id/lbl_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:drawableRight="@drawable/verification_icon"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/sofia_semi_bold"
+                android:text="McDonald’s"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_de1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_name"
+            android:orientation="horizontal"
+            android:paddingHorizontal="11dp">
+
+
+            <TextView
+                android:id="@+id/lbl_name1"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/delivery_fees_icon"
+                android:drawablePadding="5dp"
+
+                android:fontFamily="@font/sofia_regular"
+                android:text="free delivery"
+                android:textColor="@color/auth_hint_color"
+                android:textSize="12dp" />
+
+
+            <TextView
+                android:id="@+id/lbl_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/card_view"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/delivery_time_icon"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/sofia_regular"
+                android:text="10-15 mins"
+                android:textColor="@color/auth_hint_color"
+                android:textSize="12dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_de2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_de1"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="11dp">
+
+
+            <TextView
+                android:id="@+id/lbl_food_type1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="11dp"
+                android:background="@drawable/auth_shape"
+                android:fontFamily="@font/sofia_regular"
+                android:padding="3dp"
+                android:text="Burger"
+                android:textColor="@color/auth_hint_color"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/lbl_food_type2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/auth_shape"
+                android:fontFamily="@font/sofia_regular"
+                android:padding="3dp"
+                android:text="Chicken"
+                android:textColor="@color/auth_hint_color"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/lbl_food_type3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/auth_shape"
+                android:fontFamily="@font/sofia_regular"
+                android:padding="3dp"
+                android:text="Fast Food"
+                android:textColor="@color/auth_hint_color"
+                android:textSize="12dp" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
