@@ -23,11 +23,9 @@ import com.moashrafff.foodhub.databinding.FragmentRestaurantProfileBinding;
 
 public class RestaurantProfileFragment extends Fragment {
 
-
     FragmentRestaurantProfileBinding binding;
     private FoodViewModel viewModel;
     private RestaurantDetailsFeaturedAdapter adapter;
-
 
     public RestaurantProfileFragment() {
         // Required empty public constructor

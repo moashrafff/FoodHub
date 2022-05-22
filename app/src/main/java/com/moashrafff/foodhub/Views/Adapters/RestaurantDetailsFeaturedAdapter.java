@@ -46,7 +46,6 @@ public class RestaurantDetailsFeaturedAdapter extends RecyclerView.Adapter<Resta
         holder.binding.btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 view.setBackground(context.getDrawable(R.drawable.restaurant_item_like_shape));
             }
         });
