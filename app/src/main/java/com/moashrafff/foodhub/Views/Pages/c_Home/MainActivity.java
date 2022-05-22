@@ -3,33 +3,23 @@ package com.moashrafff.foodhub.Views.Pages.c_Home;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
-import com.moashrafff.foodhub.CartFragment;
 import com.moashrafff.foodhub.Config.Constants;
-import com.moashrafff.foodhub.Data.Model.Category;
 import com.moashrafff.foodhub.Data.Model.DrawerItemModel;
-import com.moashrafff.foodhub.Data.Model.Root;
 import com.moashrafff.foodhub.Data.Model.SpaceItem;
 import com.moashrafff.foodhub.R;
 import com.moashrafff.foodhub.Views.Adapters.DrawerAdapter;
-import com.moashrafff.foodhub.Views.Adapters.HomeCategoriesAdapter;
 import com.moashrafff.foodhub.Views.Adapters.SimpleItem;
-import com.moashrafff.foodhub.Views.FoodDetailsFragment;
-import com.moashrafff.foodhub.Views.FoodViewModel;
-import com.moashrafff.foodhub.Views.HomeFragment;
-import com.moashrafff.foodhub.Views.signUp;
+import com.moashrafff.foodhub.Views.Pages.b_Account.signUp;
 import com.moashrafff.foodhub.databinding.ActivityHomeScreenBinding;
 
 import com.yarolegovich.slidingrootnav.SlidingRootNav;

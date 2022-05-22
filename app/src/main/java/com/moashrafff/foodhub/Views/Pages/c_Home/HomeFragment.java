@@ -1,9 +1,6 @@
-package com.moashrafff.foodhub.Views;
+package com.moashrafff.foodhub.Views.Pages.c_Home;
 
-import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,11 +17,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.moashrafff.foodhub.Config.Constants;
 import com.moashrafff.foodhub.Data.Model.Food;
 import com.moashrafff.foodhub.Data.Model.Restaurant;
+import com.moashrafff.foodhub.Data.Model.RestaurantDetailsRoot;
 import com.moashrafff.foodhub.Data.Model.Root;
 import com.moashrafff.foodhub.R;
 import com.moashrafff.foodhub.Views.Adapters.HomeCategoriesAdapter;
 import com.moashrafff.foodhub.Views.Adapters.HomeFoodAdapter;
 import com.moashrafff.foodhub.Views.Adapters.HomeRestaurantAdapter;
+import com.moashrafff.foodhub.Views.FoodViewModel;
+import com.moashrafff.foodhub.Views.Pages.c_Home.FoodDetailsFragment;
 import com.moashrafff.foodhub.Views.Pages.c_Home.RestaurantFoodSearchFragment;
 import com.moashrafff.foodhub.Views.Pages.c_Home.RestaurantProfileFragment;
 import com.moashrafff.foodhub.databinding.FragmentHomeScreenBinding;
@@ -89,27 +89,14 @@ public class HomeFragment extends Fragment implements HomeRestaurantAdapter.onIt
         });
     }
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        binding=null;
-    }
-
 
     @Override
     public void onItemClick(Restaurant restaurant) {
-        Bundle bundle = new Bundle();
-        bundle.putString("resName",restaurant.getName());
-        bundle.putString("resCover",restaurant.getCover_photo());
-        bundle.putString("resImage",restaurant.getPic());
-        bundle.putString("resRate",restaurant.getRating());
-        bundle.putString("resDelTime",restaurant.getDelivery_time());
-        bundle.putString("resDel",restaurant.getDelivery());
-        bundle.putString("resVer",restaurant.getVerified());
+
+        Constants.setResDetailsId(restaurant.getId());
         RestaurantProfileFragment fragment = new RestaurantProfileFragment();
-        fragment.setArguments(bundle);
         getParentFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
-        Log.e(TAG, "onItemClick: dakhal "+"dakhal" +restaurant.getName() );
+
     }
 
     @Override

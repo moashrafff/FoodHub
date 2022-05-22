@@ -31,6 +31,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
+                android:id="@+id/food_price"
                 android:layout_width="60dp"
                 android:layout_height="30dp"
                 android:layout_alignParentStart="true"
@@ -40,9 +41,7 @@
                 android:fontFamily="@font/tt_commons"
                 android:gravity="center"
                 android:text="$ 9.50"
-                android:textColor="@color/black"
-                android:id="@+id/food_price"
-                />
+                android:textColor="@color/black" />
 
             <LinearLayout
                 android:layout_width="30dp"
@@ -64,6 +63,7 @@
         </RelativeLayout>
 
         <TextView
+            android:id="@+id/food_rate"
             android:layout_width="60dp"
             android:layout_height="30dp"
             android:layout_alignParentStart="true"
@@ -77,9 +77,7 @@
             android:padding="5dp"
             android:text="4.5 (25+)"
             android:textColor="@color/black"
-            android:textSize="10dp"
-            android:id="@+id/food_rate"
-            />
+            android:textSize="10dp" />
 
         <LinearLayout
             android:id="@+id/food_item_main_linear"

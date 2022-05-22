@@ -75,8 +75,11 @@ dependencies {
     //Navigation Drawer
     implementation 'com.yarolegovich:sliding-root-nav:1.1.1'
 
-
+    //Animation
     implementation 'com.github.mohammadatif:Animatoo:master'
+
+    //SliderView
+    implementation 'com.github.smarteist:autoimageslider:1.4.0-appcompat'
 
 
 

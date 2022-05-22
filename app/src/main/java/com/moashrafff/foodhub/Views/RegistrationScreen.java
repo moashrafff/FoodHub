@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.moashrafff.foodhub.databinding.AuthRegistrationScreenBinding;
 
-public class Registraion_screen extends AppCompatActivity {
+public class RegistrationScreen extends AppCompatActivity {
 
     AuthRegistrationScreenBinding binding;
     @Override

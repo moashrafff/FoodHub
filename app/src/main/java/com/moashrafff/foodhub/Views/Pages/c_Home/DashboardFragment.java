@@ -1,4 +1,4 @@
-package com.moashrafff.foodhub;
+package com.moashrafff.foodhub.Views.Pages.c_Home;
 
 import android.os.Bundle;
 
@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.moashrafff.foodhub.R;
 
 public class DashboardFragment extends Fragment {
 

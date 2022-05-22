@@ -118,7 +118,9 @@
             android:paddingVertical="18dp"
             android:text="Start with email or phone"
             android:textColor="#FEFEFE"
-            android:textSize="17dp" />
+            android:textSize="17dp"
+            android:id="@+id/start_btn"
+            />
     </LinearLayout>
 
     <LinearLayout

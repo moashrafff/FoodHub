@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodHub">
         <activity
+            android:name=".Views.Pages.a_Intro.OnBoardingScreen"
+            android:exported="false" />
+        <activity
             android:name=".Views.Pages.a_Intro.WelcomeScreen"
             android:exported="false" />
         <activity
@@ -22,16 +25,15 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".Views.Registraion_screen"
+            android:name=".Views.RegistrationScreen"
             android:exported="true" />
         <activity
             android:name=".Views.Pages.c_Home.MainActivity"
-            android:exported="true"/>
+            android:exported="true" />
     </application>
 
 </manifest>

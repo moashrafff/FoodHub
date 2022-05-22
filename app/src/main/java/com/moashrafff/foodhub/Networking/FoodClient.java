@@ -3,6 +3,7 @@ package com.moashrafff.foodhub.Networking;
 import com.moashrafff.foodhub.Config.Constants;
 import com.moashrafff.foodhub.Data.Model.Food;
 import com.moashrafff.foodhub.Data.Model.Restaurant;
+import com.moashrafff.foodhub.Data.Model.RestaurantDetailsRoot;
 import com.moashrafff.foodhub.Data.Model.Root;
 import com.moashrafff.foodhub.Interfaces.EndPoints;
 
@@ -40,7 +41,14 @@ public class FoodClient {
         return Interface.getFood(Constants.FoodDetailsFeatures, Constants.FoodDetailsId);
     }
 
+    public Call<RestaurantDetailsRoot> getRest(){
+        return Interface.getRest(Constants.ResDetailsFeatures, Constants.ResDetailsId);
+    }
+
     public Call<ArrayList<Restaurant>> getSearchRestaurant(){
         return Interface.getSearchRestaurant(Constants.FoodSearchMethod,Constants.FoodSearchKeyWord);
+    }
+    public Call<ArrayList<Food>> getSearchFood(){
+        return Interface.getSearchFood(Constants.ResSearchMethod,Constants.ResSearchKeyWord);
     }
 }

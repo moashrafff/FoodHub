@@ -54,7 +54,7 @@ public class RestaurantSearchAdapter extends RecyclerView.Adapter<RecyclerView.V
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
         if (holder.getItemViewType()==FIRST_POSITION){
-            restaurants.add(0,new Restaurant("1","2","","2","3","4","4","4","1","3","2","",""));
+            restaurants.add(0,new Restaurant());
             FirstSearchHolder holder1 = (FirstSearchHolder) holder;
             holder1.binding1.number.setText(restaurants.size()-1+"");
         }else {

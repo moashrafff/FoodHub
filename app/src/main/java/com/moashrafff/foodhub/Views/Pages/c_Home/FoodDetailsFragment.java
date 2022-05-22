@@ -1,4 +1,4 @@
-package com.moashrafff.foodhub.Views;
+package com.moashrafff.foodhub.Views.Pages.c_Home;
 
 import android.os.Bundle;
 
@@ -16,6 +16,7 @@ import com.bumptech.glide.Glide;
 import com.moashrafff.foodhub.Config.Constants;
 import com.moashrafff.foodhub.Data.Model.Food;
 import com.moashrafff.foodhub.R;
+import com.moashrafff.foodhub.Views.FoodViewModel;
 import com.moashrafff.foodhub.databinding.FoodDetailsScreenBinding;
 import com.moashrafff.foodhub.databinding.FragmentHomeScreenBinding;
 

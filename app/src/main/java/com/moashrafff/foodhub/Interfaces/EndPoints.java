@@ -2,6 +2,7 @@ package com.moashrafff.foodhub.Interfaces;
 
 import com.moashrafff.foodhub.Data.Model.Food;
 import com.moashrafff.foodhub.Data.Model.Restaurant;
+import com.moashrafff.foodhub.Data.Model.RestaurantDetailsRoot;
 import com.moashrafff.foodhub.Data.Model.Root;
 
 import java.util.ArrayList;
@@ -22,7 +23,15 @@ public interface EndPoints {
 
     @FormUrlEncoded
     @POST("food/serv.php")
+    public Call<RestaurantDetailsRoot> getRest(@Field("method")String method, @Field("restaurant_id")String foodId);
+
+    @FormUrlEncoded
+    @POST("food/serv.php")
     public Call<ArrayList<Restaurant>> getSearchRestaurant(@Field("method")String method, @Field("keyword")String keyword);
+
+    @FormUrlEncoded
+    @POST("food/serv.php")
+    public Call<ArrayList<Food>> getSearchFood(@Field("method")String method, @Field("keyword")String keyword);
 
 
 

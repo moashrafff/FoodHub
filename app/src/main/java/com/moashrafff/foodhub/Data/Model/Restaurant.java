@@ -15,21 +15,6 @@ public class Restaurant {
     public String lat;
     public String lng;
 
-    public Restaurant(String id, String name, String pic, String delivery, String delivery_time, String tags, String rating, String cover_photo, String verified, String number_of_ratings, String address, String lat, String lng) {
-        this.id = id;
-        this.name = name;
-        this.pic = pic;
-        this.delivery = delivery;
-        this.delivery_time = delivery_time;
-        this.tags = tags;
-        this.rating = rating;
-        this.cover_photo = cover_photo;
-        this.verified = verified;
-        this.number_of_ratings = number_of_ratings;
-        this.address = address;
-        this.lat = lat;
-        this.lng = lng;
-    }
 
 
 

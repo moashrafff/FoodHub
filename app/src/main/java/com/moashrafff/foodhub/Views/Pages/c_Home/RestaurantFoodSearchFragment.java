@@ -19,8 +19,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.moashrafff.foodhub.Config.Constants;
+import com.moashrafff.foodhub.Data.Model.Food;
 import com.moashrafff.foodhub.Data.Model.Restaurant;
 import com.moashrafff.foodhub.R;
+import com.moashrafff.foodhub.Views.Adapters.FoodSearchAdapter;
 import com.moashrafff.foodhub.Views.Adapters.RestaurantSearchAdapter;
 import com.moashrafff.foodhub.Views.FoodViewModel;
 import com.moashrafff.foodhub.databinding.FragmentHomeScreenBinding;
@@ -34,6 +36,7 @@ public class RestaurantFoodSearchFragment extends Fragment implements View.OnCli
 
     private SearchScreenBinding binding;
     private RestaurantSearchAdapter resAdapter;
+    private FoodSearchAdapter foodAdapter;
     private FoodViewModel viewModel;
 
 
@@ -50,6 +53,7 @@ public class RestaurantFoodSearchFragment extends Fragment implements View.OnCli
         View view = binding.getRoot();
 
         resAdapter = new RestaurantSearchAdapter(requireContext());
+        foodAdapter = new FoodSearchAdapter(requireContext());
         binding.searchRv.setLayoutManager(new GridLayoutManager(requireContext(), 2));
 
         return view;
@@ -73,6 +77,8 @@ public class RestaurantFoodSearchFragment extends Fragment implements View.OnCli
                 Constants.setFoodSearchKeyWord(charSequence.toString());
                 viewModel.getSearchRestaurant();
                 Log.e("TAG", "onTextChanged: "+charSequence );
+                Constants.setResSearchKeyWord(charSequence.toString());
+                viewModel.getSearchFood();
             }
 
             @Override
@@ -94,6 +100,13 @@ public class RestaurantFoodSearchFragment extends Fragment implements View.OnCli
             }
         });
 
+        viewModel.searchFood.observe(requireActivity(), new Observer<ArrayList<Food>>() {
+            @Override
+            public void onChanged(ArrayList<Food> foods) {
+                foodAdapter.setFoods(foods);
+            }
+        });
+
 
     }
 
@@ -101,17 +114,25 @@ public class RestaurantFoodSearchFragment extends Fragment implements View.OnCli
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.res_btn:
+                binding.searchRv.setAdapter(null);
                 view.setBackground(getResources().getDrawable(R.drawable.login_btn_shape));
                 binding.resBtn.setTextColor(requireContext().getColor(R.color.white));
                 binding.foodBtn.setBackground(null);
                 binding.foodBtn.setTextColor(requireContext().getColor(R.color.btn_color));
                 binding.searchRv.setAdapter(resAdapter);
+                resAdapter.notifyDataSetChanged();
+                binding.tvSearch.setText("");
                 break;
             case R.id.food_btn:
+                binding.searchRv.setAdapter(null);
                 view.setBackground(getResources().getDrawable(R.drawable.login_btn_shape));
                 binding.foodBtn.setTextColor(requireContext().getColor(R.color.white));
                 binding.resBtn.setBackground(null);
                 binding.resBtn.setTextColor(requireContext().getColor(R.color.btn_color));
+                binding.searchRv.setAdapter(foodAdapter);
+                resAdapter.notifyDataSetChanged();
+                binding.tvSearch.setText("");
+
                 break;
         }
     }
