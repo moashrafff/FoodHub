@@ -1,6 +1,8 @@
 package com.moashrafff.foodhub.Views;
 
+import android.content.Context;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -9,6 +11,7 @@ import com.moashrafff.foodhub.Data.Model.Food;
 import com.moashrafff.foodhub.Data.Model.Restaurant;
 import com.moashrafff.foodhub.Data.Model.RestaurantDetailsRoot;
 import com.moashrafff.foodhub.Data.Model.Root;
+import com.moashrafff.foodhub.Data.Model.User;
 import com.moashrafff.foodhub.Networking.FoodClient;
 
 import java.util.ArrayList;
@@ -30,6 +33,7 @@ public class FoodViewModel extends ViewModel {
     public MutableLiveData<ArrayList<Food>> foodsByCategories = new MutableLiveData<>();
 
     public MutableLiveData<String> registerTest = new MutableLiveData<>();
+    public MutableLiveData<User> loginTest = new MutableLiveData<>();
 
     public void getRoot() {
         FoodClient.getINSTANCE().getRoot().enqueue(new Callback<Root>() {
@@ -127,6 +131,20 @@ public class FoodViewModel extends ViewModel {
             @Override
             public void onFailure(Call<String> call, Throwable t) {
 
+            }
+        });
+    }
+
+    public void login(Context context){
+        FoodClient.getINSTANCE().login().enqueue(new Callback<User>() {
+            @Override
+            public void onResponse(Call<User> call, Response<User> response) {
+                loginTest.setValue(response.body());
+            }
+
+            @Override
+            public void onFailure(Call<User> call, Throwable t) {
+                Toast.makeText(context,"Invalid Email or Password",Toast.LENGTH_SHORT).show();
             }
         });
     }

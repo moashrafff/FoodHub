@@ -1,9 +1,7 @@
-package com.moashrafff.foodhub.Views.Pages.b_Account;
+package com.moashrafff.foodhub.Views.Pages.b_Account.a_SignUp;
 
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
@@ -16,7 +14,7 @@ import android.view.ViewGroup;
 import com.moashrafff.foodhub.Config.Constants;
 import com.moashrafff.foodhub.R;
 import com.moashrafff.foodhub.Views.FoodViewModel;
-import com.moashrafff.foodhub.Views.Pages.c_Home.CategoryFragment;
+import com.moashrafff.foodhub.Views.Pages.b_Account.b_Login.LoginFragment;
 import com.moashrafff.foodhub.databinding.AuthRegistrationScreenBinding;
 
 

@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodHub">
         <activity
-            android:name=".Views.Pages.c_Home.ActivityAuth"
+            android:name=".Views.Pages.b_Account.ActivityAuth"
             android:exported="false" />
         <activity
             android:name=".Views.Pages.a_Intro.OnBoardingScreen"

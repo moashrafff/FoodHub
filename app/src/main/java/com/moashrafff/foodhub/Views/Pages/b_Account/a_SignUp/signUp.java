@@ -1,4 +1,4 @@
-package com.moashrafff.foodhub.Views.Pages.b_Account;
+package com.moashrafff.foodhub.Views.Pages.b_Account.a_SignUp;
 
 import android.os.Bundle;
 
@@ -13,8 +13,7 @@ import android.view.ViewGroup;
 
 import com.moashrafff.foodhub.Config.Constants;
 import com.moashrafff.foodhub.R;
-import com.moashrafff.foodhub.databinding.ActivityCartBinding;
-import com.moashrafff.foodhub.databinding.AuthRegistrationScreenBinding;
+import com.moashrafff.foodhub.Views.Pages.b_Account.b_Login.LoginFragment;
 import com.moashrafff.foodhub.databinding.AuthSignUpScreenBinding;
 
 

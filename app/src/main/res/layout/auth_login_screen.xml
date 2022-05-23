@@ -76,7 +76,9 @@
                 android:fontFamily="@font/sofia_regular"
                 android:hint="@string/auth_email_hint"
                 android:maxLines="1"
-                app:hintTextColor="@color/auth_hint_color" />
+                app:hintTextColor="@color/auth_hint_color"
+                android:id="@+id/login_email_et"
+                />
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -119,7 +121,9 @@
                 android:inputType="textPassword"
                 android:maxLines="1"
                 app:hintTextColor="@color/auth_hint_color"
-                tools:ignore="DuplicateSpeakableTextCheck" />
+                tools:ignore="DuplicateSpeakableTextCheck"
+                android:id="@+id/login_pass_et"
+                />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -139,6 +143,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:text="@string/login_text"
+            android:id="@+id/login_btn"
              />
 
     </LinearLayout>

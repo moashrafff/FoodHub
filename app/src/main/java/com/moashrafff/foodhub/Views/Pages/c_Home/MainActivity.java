@@ -3,6 +3,9 @@ package com.moashrafff.foodhub.Views.Pages.c_Home;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -19,9 +22,8 @@ import com.moashrafff.foodhub.Data.Model.SpaceItem;
 import com.moashrafff.foodhub.R;
 import com.moashrafff.foodhub.Views.Adapters.DrawerAdapter;
 import com.moashrafff.foodhub.Views.Adapters.SimpleItem;
-import com.moashrafff.foodhub.Views.Pages.b_Account.signUp;
+import com.moashrafff.foodhub.Views.Pages.b_Account.a_SignUp.signUp;
 import com.moashrafff.foodhub.databinding.ActivityHomeScreenBinding;
-
 import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 
@@ -38,15 +40,17 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
     private SlidingRootNav slidingRootNav;
     ActivityHomeScreenBinding binding;
 
+    boolean doubleBackToExitPressedOnce = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       binding = ActivityHomeScreenBinding.inflate(getLayoutInflater());
+        binding = ActivityHomeScreenBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.btmNavBar.setItemSelected(R.id.bottm_nav_dash_board,true);
-        getSupportFragmentManager().beginTransaction().replace(R.id.container,new HomeFragment()).commit();
+        binding.btmNavBar.setItemSelected(R.id.bottm_nav_dash_board, true);
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new HomeFragment()).commit();
         bottomNav();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -69,16 +73,15 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
         screenTitles = loadScreenTitles();
 
         DrawerAdapter adapter = new DrawerAdapter(Arrays.asList(createItemFor(Constants.POS_CLOSE)
-        ,createItemFor(Constants.POS_MY_PROFILE)
-        ,createItemFor(Constants.POS_DEL_ADD)
-        ,createItemFor(Constants.POS_PAY_MET)
-        ,createItemFor(Constants.POS_CONTACT_US).setChecked(true)
-        ,createItemFor(Constants.POS_SET)
-        ,createItemFor(Constants.POS_HELP)
-        ,new SpaceItem(260)
-        ,createItemFor(Constants.POS_LOG_OUT)
+                , createItemFor(Constants.POS_MY_PROFILE)
+                , createItemFor(Constants.POS_DEL_ADD)
+                , createItemFor(Constants.POS_PAY_MET)
+                , createItemFor(Constants.POS_CONTACT_US).setChecked(true)
+                , createItemFor(Constants.POS_SET)
+                , createItemFor(Constants.POS_HELP)
+                , new SpaceItem(260)
+                , createItemFor(Constants.POS_LOG_OUT)
         ));
-
 
 
         RecyclerView list = findViewById(R.id.drawer_list);
@@ -91,16 +94,31 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
 
     }
 
-    private DrawerItemModel createItemFor(int position){
-        return new SimpleItem(screenIcons[position],screenTitles[position])
+    private DrawerItemModel createItemFor(int position) {
+        return new SimpleItem(screenIcons[position], screenTitles[position])
                 .withTextTint(R.color.auth_color)
                 .withSelectedTextTint(R.color.btn_color);
     }
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-        finish();
+
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            finishAffinity();
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce = false;
+            }
+        }, 2000);
     }
 
     private String[] loadScreenTitles() {
@@ -111,16 +129,15 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
         TypedArray array = getResources().obtainTypedArray(R.array.activityScreenIcons);
         Drawable[] icons = new Drawable[array.length()];
 
-        for (int i = 0; i<array.length();i++){
-            int id  = array.getResourceId(i,0);
-            if (id!=0){
-                icons[i] = ContextCompat.getDrawable(this,id);
+        for (int i = 0; i < array.length(); i++) {
+            int id = array.getResourceId(i, 0);
+            if (id != 0) {
+                icons[i] = ContextCompat.getDrawable(this, id);
             }
         }
         array.recycle();
         return icons;
     }
-
 
 
     private void bottomNav() {
@@ -129,7 +146,7 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
             @Override
             public void onItemSelected(int i) {
                 Fragment fragment = null;
-                switch (i){
+                switch (i) {
                     case R.id.bottm_nav_dash_board:
                         fragment = new HomeFragment();
                         break;
@@ -141,25 +158,24 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
                         break;
 
                 }
-                getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
             }
         });
     }
 
     @Override
     public void onItemSelected(int position) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        Fragment fragment = null;
 
-        if (position == Constants.POS_MY_PROFILE){
-            CartFragment fragment = new CartFragment();
-            transaction.replace(R.id.container,fragment);
-        }else if (position == Constants.POS_PAY_MET) {
-            signUp fragment = new signUp();
-            transaction.replace(R.id.container, fragment);
+
+        switch (position){
+            case Constants.POS_MY_PROFILE:
+                fragment = new CartFragment();
+                break;
         }
-
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
         slidingRootNav.closeMenu();
-        transaction.addToBackStack(null);
-        transaction.commit();
+
     }
+
 }

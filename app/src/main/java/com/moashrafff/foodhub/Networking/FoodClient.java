@@ -5,6 +5,7 @@ import com.moashrafff.foodhub.Data.Model.Food;
 import com.moashrafff.foodhub.Data.Model.Restaurant;
 import com.moashrafff.foodhub.Data.Model.RestaurantDetailsRoot;
 import com.moashrafff.foodhub.Data.Model.Root;
+import com.moashrafff.foodhub.Data.Model.User;
 import com.moashrafff.foodhub.Interfaces.EndPoints;
 
 import java.util.ArrayList;
@@ -57,5 +58,9 @@ public class FoodClient {
 
     public Call<String> register(){
         return Interface.register(Constants.REG_METHOD,Constants.REG_TYPE,Constants.REG_EMAIL,Constants.REG_PASS,Constants.REG_NAME,Constants.REG_MOBILE);
+    }
+
+    public Call<User> login(){
+        return Interface.login(Constants.LOG_EMAIL,Constants.LOG_PASS,Constants.LOG_TYPE,Constants.LOG_METHOD);
     }
 }

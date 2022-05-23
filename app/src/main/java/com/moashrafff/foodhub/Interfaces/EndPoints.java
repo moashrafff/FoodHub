@@ -4,6 +4,7 @@ import com.moashrafff.foodhub.Data.Model.Food;
 import com.moashrafff.foodhub.Data.Model.Restaurant;
 import com.moashrafff.foodhub.Data.Model.RestaurantDetailsRoot;
 import com.moashrafff.foodhub.Data.Model.Root;
+import com.moashrafff.foodhub.Data.Model.User;
 
 import java.util.ArrayList;
 
@@ -41,7 +42,9 @@ public interface EndPoints {
     @POST("food/serv.php")
     public Call<String> register(@Field("method")String method, @Field("type")String type,@Field("email")String email,@Field("pass")String pass,@Field("name")String name,@Field("mobile")String mobile);
 
-
+    @FormUrlEncoded
+    @POST("food/serv.php")
+    public Call<User> login(@Field("email")String email, @Field("pass")String pass, @Field("type")String type, @Field("method")String method);
 
 
 }

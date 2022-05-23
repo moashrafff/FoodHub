@@ -29,9 +29,7 @@ public class WelcomeScreen extends BaseActivity implements View.OnClickListener 
             case R.id.start_btn:
                 navigateTo(OnBoardingScreen.class);
                 break;
-            case R.id.btn_welcome_facebook:
-                navigateTo(MainActivity.class);
-                break;
+
         }
     }
 }
