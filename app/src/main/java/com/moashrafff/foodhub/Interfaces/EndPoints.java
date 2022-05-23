@@ -27,11 +27,19 @@ public interface EndPoints {
 
     @FormUrlEncoded
     @POST("food/serv.php")
+    public Call<ArrayList<Food>> getFoodsById(@Field("method")String method, @Field("cat_id")String catId);
+
+    @FormUrlEncoded
+    @POST("food/serv.php")
     public Call<ArrayList<Restaurant>> getSearchRestaurant(@Field("method")String method, @Field("keyword")String keyword);
 
     @FormUrlEncoded
     @POST("food/serv.php")
     public Call<ArrayList<Food>> getSearchFood(@Field("method")String method, @Field("keyword")String keyword);
+
+    @FormUrlEncoded
+    @POST("food/serv.php")
+    public Call<ArrayList<Food>> register(@Field("method")String method, @Field("keyword")String keyword);
 
 
 

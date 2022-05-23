@@ -27,6 +27,8 @@ public class FoodViewModel extends ViewModel {
     public MutableLiveData<ArrayList<Restaurant>> searchRestaurant = new MutableLiveData<>();
     public MutableLiveData<ArrayList<Food>> searchFood = new MutableLiveData<>();
 
+    public MutableLiveData<ArrayList<Food>> foodsByCategories = new MutableLiveData<>();
+
     public void getRoot() {
         FoodClient.getINSTANCE().getRoot().enqueue(new Callback<Root>() {
             @Override
@@ -98,6 +100,22 @@ public class FoodViewModel extends ViewModel {
             }
         });
     }
+
+    public void getFoodsByCategories(){
+        FoodClient.getINSTANCE().getFoodsById().enqueue(new Callback<ArrayList<Food>>() {
+            @Override
+            public void onResponse(Call<ArrayList<Food>> call, Response<ArrayList<Food>> response) {
+                foodsByCategories.setValue(response.body());
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<Food>> call, Throwable t) {
+
+            }
+        });
+    }
+
+
 
 
 }

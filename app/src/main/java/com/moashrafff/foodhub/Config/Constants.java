@@ -7,9 +7,11 @@ public class Constants {
 
     public static String FoodDetailsFeatures = "food";
     public static String ResDetailsFeatures = "restaurant";
+    public static String CatDetailsFeatures = "foods";
 
     public static String FoodDetailsId;
     public static String ResDetailsId;
+    public static String CatId;
 
 
     public static String FoodSearchMethod = "search_restaurant";
@@ -44,4 +46,7 @@ public class Constants {
         ResDetailsId = resDetailsId;
     }
 
+    public static void setCatId(String catId) {
+        CatId = catId;
+    }
 }

@@ -2,11 +2,12 @@
 
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="266dp"
-    android:layout_height="204dp"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
     app:cardCornerRadius="15dp"
     android:layout_margin="10dp"
     android:minWidth="266dp"
+    android:layout_marginHorizontal="20dp"
 
     >
 
@@ -106,15 +107,6 @@
 
         </RelativeLayout>
 
-        <LinearLayout
-            android:id="@+id/linear_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/card_view"
-
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingHorizontal="11dp">
 
             <TextView
 
@@ -127,37 +119,26 @@
                 android:fontFamily="@font/sofia_semi_bold"
                 android:text="McDonald’s"
                 android:textColor="@color/black"
-                android:textSize="15dp" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linear_de1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/linear_name"
-            android:layout_marginBottom="5dp"
-            android:orientation="horizontal"
-            android:paddingHorizontal="11dp"
-            android:layout_marginTop="5dp"
-            >
-
+                android:textSize="15dp"
+                android:layout_below="@+id/card_view"
+                android:paddingHorizontal="11dp"
+                />
 
             <TextView
                 android:id="@+id/lbl_name1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-
                 android:drawablePadding="5dp"
                 android:fontFamily="@font/sofia_regular"
                 android:text="free delivery"
                 android:textColor="#5B5B5E"
-                android:textSize="12dp" />
+                android:textSize="12dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/lbl_name"
+                android:paddingHorizontal="11dp"
+                />
 
-
-        </LinearLayout>
 
 
     </RelativeLayout>

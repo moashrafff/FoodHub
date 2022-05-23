@@ -33,15 +33,17 @@
         <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/activity_main.xml" value="0.2421875" />
         <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/activity_on_boarding_screen.xml" value="0.176" />
         <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/add_new_card_screen.xml" value="0.264" />
-        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/auth_login_screen.xml" value="0.536" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/auth_login_screen.xml" value="0.2" />
         <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/auth_registration_screen.xml" value="0.2421875" />
         <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/auth_sign_up_screen.xml" value="0.2421875" />
         <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/auth_verification_code.xml" value="0.2421875" />
         <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/back_header.xml" value="0.2421875" />
         <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/board_item.xml" value="0.2421875" />
         <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/cart_item.xml" value="0.2421875" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/cat_item.xml" value="0.6" />
         <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/categories_item.xml" value="0.2421875" />
         <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/categories_style.xml" value="0.2421875" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/category_screen.xml" value="0.2" />
         <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/drawer_menu_layout.xml" value="0.24114583333333334" />
         <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/featured_item.xml" value="0.4" />
         <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/first_postion_item.xml" value="0.24114583333333334" />
@@ -50,6 +52,7 @@
         <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/food_item.xml" value="0.6830985915492958" />
         <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/food_search_screen.xml" value="0.264" />
         <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/fragment_blank.xml" value="0.2421875" />
+        <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/fragment_category.xml" value="0.2421875" />
         <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/fragment_dashboard.xml" value="0.2421875" />
         <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/fragment_home.xml" value="0.2421875" />
         <entry key="..\:/Users/Technology/AndroidStudioProjects/FoodHub/app/src/main/res/layout/fragment_home_screen.xml" value="0.5347826086956522" />

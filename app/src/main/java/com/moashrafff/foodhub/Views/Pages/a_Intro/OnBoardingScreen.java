@@ -30,6 +30,8 @@ public class OnBoardingScreen extends AppCompatActivity implements View.OnClickL
         binding.imageSlider.setSliderTransformAnimation(SliderAnimations.FANTRANSFORMATION);
 
 
+        binding.boardBtn.setOnClickListener(this);
+
 
     }
 

@@ -51,4 +51,7 @@ public class FoodClient {
     public Call<ArrayList<Food>> getSearchFood(){
         return Interface.getSearchFood(Constants.ResSearchMethod,Constants.ResSearchKeyWord);
     }
+    public Call<ArrayList<Food>> getFoodsById(){
+        return Interface.getFoodsById(Constants.CatDetailsFeatures,Constants.CatId);
+    }
 }

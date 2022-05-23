@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodHub">
         <activity
-            android:name=".ActivityAuth"
+            android:name=".Views.Pages.c_Home.ActivityAuth"
             android:exported="false" />
         <activity
             android:name=".Views.Pages.a_Intro.OnBoardingScreen"
@@ -33,7 +33,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Views.RegistrationScreen"
+            android:name=".Views.Pages.b_Account.RegistrationScreen"
             android:exported="true" />
         <activity
             android:name=".Views.Pages.c_Home.MainActivity"

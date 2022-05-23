@@ -1,5 +1,6 @@
 package com.moashrafff.foodhub.Views.Pages.b_Account;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,15 +12,18 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.moashrafff.foodhub.R;
-import com.moashrafff.foodhub.databinding.ActivityCartBinding;
-import com.moashrafff.foodhub.databinding.AuthRegistrationScreenBinding;
-import com.moashrafff.foodhub.databinding.AuthSignUpScreenBinding;
+import com.moashrafff.foodhub.Views.Pages.c_Home.MainActivity;
+import com.moashrafff.foodhub.databinding.AuthLoginScreenBinding;
+import com.moashrafff.foodhub.databinding.BackHeaderBinding;
 
 
-public class signUp extends Fragment implements View.OnClickListener {
+public class LoginFragment extends Fragment implements View.OnClickListener {
 
-    AuthSignUpScreenBinding binding;
-    public signUp() {
+
+    AuthLoginScreenBinding binding;
+
+
+    public LoginFragment() {
         // Required empty public constructor
     }
 
@@ -28,24 +32,33 @@ public class signUp extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        binding = AuthSignUpScreenBinding.inflate(inflater, container, false);
+        binding = AuthLoginScreenBinding.inflate(inflater,container,false);
         View view = binding.getRoot();
 
-        binding.loginTv.setOnClickListener(this);
+        binding.signUup.setOnClickListener(this);
+        binding.btnWelcomeFacebook.setOnClickListener(this);
+
 
         return view;
     }
 
     @Override
     public void onClick(View view) {
+
         switch (view.getId()){
-            case R.id.login_tv:
-                Fragment fragment = new LoginFragment();
+            case R.id.sign_uup:
+                Fragment fragment = new signUp();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.auth_container, fragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
+                break;
+            case R.id.btn_welcome_facebook:
+                startActivity(new Intent(getActivity(), MainActivity.class));
+                getActivity().finish();
         }
+
+
     }
 }

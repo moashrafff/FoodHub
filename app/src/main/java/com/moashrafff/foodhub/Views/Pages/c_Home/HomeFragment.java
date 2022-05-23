@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.moashrafff.foodhub.Config.Constants;
+import com.moashrafff.foodhub.Data.Model.Category;
 import com.moashrafff.foodhub.Data.Model.Food;
 import com.moashrafff.foodhub.Data.Model.Restaurant;
 import com.moashrafff.foodhub.Data.Model.RestaurantDetailsRoot;
@@ -29,7 +30,7 @@ import com.moashrafff.foodhub.Views.Pages.c_Home.RestaurantFoodSearchFragment;
 import com.moashrafff.foodhub.Views.Pages.c_Home.RestaurantProfileFragment;
 import com.moashrafff.foodhub.databinding.FragmentHomeScreenBinding;
 
-public class HomeFragment extends Fragment implements HomeRestaurantAdapter.onItemClickListener,HomeFoodAdapter.onFoodClickListener {
+public class HomeFragment extends Fragment implements HomeRestaurantAdapter.onItemClickListener,HomeFoodAdapter.onFoodClickListener,HomeCategoriesAdapter.onItemClickListener {
 
     private static final String TAG = "HomeFragment";
 
@@ -50,7 +51,7 @@ public class HomeFragment extends Fragment implements HomeRestaurantAdapter.onIt
         // Inflate the layout for this fragment
         binding = FragmentHomeScreenBinding.inflate(inflater,container,false);
         View view = binding.getRoot();
-        catAdapter = new HomeCategoriesAdapter(requireContext());
+        catAdapter = new HomeCategoriesAdapter(requireContext(),this);
         resAdapter = new HomeRestaurantAdapter(requireContext(),this);
         foodAdapter= new HomeFoodAdapter(requireContext(),this);
 
@@ -106,5 +107,13 @@ public class HomeFragment extends Fragment implements HomeRestaurantAdapter.onIt
         FoodDetailsFragment fragment = new FoodDetailsFragment();
         getParentFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
 
+    }
+
+    @Override
+    public void onItemClick(Category category) {
+
+        Constants.setCatId(category.getId());
+        CategoryFragment fragment = new CategoryFragment();
+        getParentFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
     }
 }

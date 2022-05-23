@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Views.Pages.c_Home.ActivityAuth"
-    android:id="@+id/container"
+    android:id="@+id/auth_container"
     >
 
 </androidx.constraintlayout.widget.ConstraintLayout>
