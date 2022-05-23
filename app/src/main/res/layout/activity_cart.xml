@@ -22,12 +22,10 @@
             >
 
 
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/cart_lst"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-
                 android:layout_marginTop="10dp"
                 tools:listitem="@layout/cart_item" />
 
@@ -35,8 +33,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/cart_lst"
-                android:layout_centerInParent="true"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:id="@+id/centerlinear"
+                >
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -89,7 +89,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/sofia_semi_bold"
-                        android:text="50.5"
+                        android:text="0"
                         android:textColor="@color/black"
                         android:textSize="21dp" />
 
@@ -128,7 +128,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/sofia_semi_bold"
-                        android:text="5.5"
+                        android:text="0"
                         android:textColor="@color/black"
                         android:textSize="21dp" />
 
@@ -165,7 +165,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/sofia_semi_bold"
-                        android:text="1.5"
+                        android:text="0"
                         android:textColor="@color/black"
                         android:textSize="21dp" />
 
@@ -203,7 +203,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/sofia_semi_bold"
-                        android:text="57.5"
+                        android:text="0"
                         android:textColor="@color/black"
                         android:textSize="21dp" />
 
@@ -232,7 +232,12 @@
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/subtract_btn_shape"
                 android:text="chechout"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:layout_below="@+id/centerlinear"
+                android:layout_marginTop="40dp"
+
+
+                />
 
         </RelativeLayout>
 

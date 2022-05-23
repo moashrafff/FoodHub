@@ -25,14 +25,39 @@
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginTop="15dp"
                 android:src="@drawable/ground_beef_tacos"
-                app:siRadius="15dp" />
-            <com.moashrafff.foodhub.Views.Components.MainHeader
+                app:siRadius="15dp"
+                />
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
-                app:mh_image2="@drawable/like_icon"
-                app:mh_image2_color="@color/btn_color"
-                app:mh_image2_radius="50" />
+                >
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/filter_shape"
+                    android:padding="12dp"
+                    android:src="@drawable/back_btn"
+                    android:id="@+id/back_btn"
+                    android:clickable="true"
+                    />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/food_item_like_shape"
+                    android:padding="10dp"
+                    android:src="@drawable/like_icon"
+                    android:id="@+id/like_btn"
+                    />
+            </RelativeLayout>
+
+
             <TextView
                 android:id="@+id/food_item_name"
                 android:layout_width="match_parent"
@@ -141,6 +166,8 @@
                     >
 
                     <ImageView
+                        android:id="@+id/decrement_btn"
+                        android:clickable="true"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_gravity="center"
@@ -148,7 +175,9 @@
                         android:background="@drawable/subtract_btn_shape"
                         android:elevation="2dp"
                         android:padding="10dp"
-                        android:src="@drawable/subtract_btn_icon" />
+                        android:src="@drawable/subtract_btn_icon"
+
+                        />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -157,7 +186,9 @@
                         android:fontFamily="@font/sofia_semi_bold"
                         android:text="02"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:id="@+id/quantity_tv"
+                        />
 
                     <ImageView
                         android:layout_width="30dp"
@@ -165,10 +196,12 @@
                         android:layout_gravity="center"
                         android:layout_marginStart="7dp"
                         android:background="@drawable/add_btn_shape"
-                        android:clickable="true"
                         android:elevation="2dp"
                         android:padding="10dp"
-                        android:src="@drawable/add_btn_icon" />
+                        android:src="@drawable/add_btn_icon"
+                        android:id="@+id/increment_btn"
+                        android:clickable="true"
+                        />
 
 
                 </LinearLayout>

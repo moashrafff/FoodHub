@@ -93,7 +93,7 @@ public class HomeFragment extends Fragment implements HomeRestaurantAdapter.onIt
 
         Constants.setResDetailsId(restaurant.getId());
         RestaurantProfileFragment fragment = new RestaurantProfileFragment();
-        getParentFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
+        showFragment(fragment);
         tv.setText("Restaurant Profile");
 
 
@@ -104,7 +104,7 @@ public class HomeFragment extends Fragment implements HomeRestaurantAdapter.onIt
 
         Constants.setFoodDetailsId(food.getId());
         FoodDetailsFragment fragment = new FoodDetailsFragment();
-        getParentFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
+        showFragment(fragment);
         tv.setText("Food Details");
 
     }
@@ -114,7 +114,7 @@ public class HomeFragment extends Fragment implements HomeRestaurantAdapter.onIt
 
         Constants.setCatId(category.getId());
         CategoryFragment fragment = new CategoryFragment();
-        getParentFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
+        showFragment(fragment);
         tv.setText("Category Details");
     }
 
@@ -123,9 +123,16 @@ public class HomeFragment extends Fragment implements HomeRestaurantAdapter.onIt
         switch (view.getId()){
             case R.id.tvSearch:
                 RestaurantFoodSearchFragment fragment = new RestaurantFoodSearchFragment();
-                getParentFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
+                showFragment(fragment);
                 tv.setText("Search Food");
                 break;
         }
+    }
+
+    private void showFragment(Fragment fragment) {
+        getParentFragmentManager().beginTransaction()
+                .replace(R.id.container, fragment)
+                .addToBackStack(null)
+                .commit();
     }
 }

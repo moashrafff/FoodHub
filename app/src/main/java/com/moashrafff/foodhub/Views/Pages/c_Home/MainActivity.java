@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -152,7 +151,7 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
                         binding.toolbarTitle.setText("Home");
                         break;
                     case R.id.shop_nav_dash_board:
-                        fragment = new signUp();
+                        fragment = new CartFragment();
                         binding.toolbarTitle.setText("Cart");
                         break;
                     case R.id.food_det_dash_board:
@@ -170,7 +169,7 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
     public void onItemSelected(int position) {
         Fragment fragment = null;
 
-        switch (position){
+        switch (position) {
             case Constants.POS_MY_PROFILE:
                 fragment = new MyProfileFragment();
                 binding.toolbarTitle.setText("My Profile");

@@ -11,5 +11,6 @@
         <attr name="mh_image2" format="reference"/>
         <attr name="mh_image2_color" format="color"/>
         <attr name="mh_image2_radius" format="integer"/>
+        <attr name="mh_image1_onClick" format="string" />
     </declare-styleable>
 </resources>

@@ -32,7 +32,6 @@ public class MainHeader extends LinearLayout {
         float image2ShapeRadius = array.getInteger(R.styleable.MainHeader_mh_image2_radius,0);
         int image2ShapeColor= array.getColor(R.styleable.MainHeader_mh_image2_color,0);
 
-
         setOrientation(HORIZONTAL);
         build(label,drawable,image2ShapeRadius,image2ShapeColor);
 
@@ -51,6 +50,7 @@ public class MainHeader extends LinearLayout {
         imageView.setPadding((int) SizeUtils.DpTopx(12, context), (int) SizeUtils.DpTopx(12, context), (int) SizeUtils.DpTopx(12, context), (int) SizeUtils.DpTopx(12, context));
         imageView.setElevation((int) SizeUtils.DpTopx(2, context));
         imageView.setClickable(true);
+
 
 
 
