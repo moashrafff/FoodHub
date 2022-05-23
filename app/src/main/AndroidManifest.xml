@@ -33,9 +33,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Views.Pages.b_Account.RegistrationScreen"
-            android:exported="true" />
-        <activity
             android:name=".Views.Pages.c_Home.MainActivity"
             android:exported="true" />
     </application>

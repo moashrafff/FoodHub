@@ -54,4 +54,8 @@ public class FoodClient {
     public Call<ArrayList<Food>> getFoodsById(){
         return Interface.getFoodsById(Constants.CatDetailsFeatures,Constants.CatId);
     }
+
+    public Call<String> register(){
+        return Interface.register(Constants.REG_METHOD,Constants.REG_TYPE,Constants.REG_EMAIL,Constants.REG_PASS,Constants.REG_NAME,Constants.REG_MOBILE);
+    }
 }

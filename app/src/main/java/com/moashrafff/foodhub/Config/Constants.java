@@ -30,6 +30,29 @@ public class Constants {
     public static final int POS_LOG_OUT = 7;
 
 
+    public static final String REG_METHOD = "signup";
+    public static final String REG_TYPE = "user";
+    public static  String REG_EMAIL ;
+    public static  String REG_PASS ;
+    public static  String REG_NAME ;
+    public static  String REG_MOBILE ;
+
+    public static void setRegEmail(String regEmail) {
+        REG_EMAIL = regEmail;
+    }
+
+    public static void setRegPass(String regPass) {
+        REG_PASS = regPass;
+    }
+
+    public static void setRegName(String regName) {
+        REG_NAME = regName;
+    }
+
+    public static void setRegMobile(String regMobile) {
+        REG_MOBILE = regMobile;
+    }
+
     public static void setFoodDetailsId(String foodDetailsId) {
         FoodDetailsId = foodDetailsId;
     }

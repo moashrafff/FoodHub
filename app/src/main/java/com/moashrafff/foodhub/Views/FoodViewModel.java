@@ -29,6 +29,8 @@ public class FoodViewModel extends ViewModel {
 
     public MutableLiveData<ArrayList<Food>> foodsByCategories = new MutableLiveData<>();
 
+    public MutableLiveData<String> registerTest = new MutableLiveData<>();
+
     public void getRoot() {
         FoodClient.getINSTANCE().getRoot().enqueue(new Callback<Root>() {
             @Override
@@ -110,6 +112,20 @@ public class FoodViewModel extends ViewModel {
 
             @Override
             public void onFailure(Call<ArrayList<Food>> call, Throwable t) {
+
+            }
+        });
+    }
+
+    public void register(){
+        FoodClient.getINSTANCE().register().enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                    registerTest.setValue(response.body());
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
 
             }
         });

@@ -66,7 +66,9 @@
                 android:fontFamily="@font/sofia_regular"
                 android:hint="@string/auth_email_hint"
                 android:maxLines="1"
-                app:hintTextColor="@color/auth_hint_color" />
+                app:hintTextColor="@color/auth_hint_color"
+                android:id="@+id/et_name"
+                />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -106,7 +108,9 @@
                 android:fontFamily="@font/sofia_regular"
                 android:hint="@string/auth_email_hint"
                 android:maxLines="1"
-                app:hintTextColor="@color/auth_hint_color" />
+                app:hintTextColor="@color/auth_hint_color"
+                android:id="@+id/et_email"
+                />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -148,7 +152,9 @@
                 android:imeOptions="actionNext"
                 android:inputType="textPassword"
                 android:maxLines="1"
-                app:hintTextColor="@color/auth_hint_color" />
+                app:hintTextColor="@color/auth_hint_color"
+                android:id="@+id/et_pass"
+                />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -160,7 +166,9 @@
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:text="@string/sign_up_text"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:id="@+id/sign_up_btn"
+            />
 
         <LinearLayout
             android:layout_width="wrap_content"

@@ -39,7 +39,7 @@ public interface EndPoints {
 
     @FormUrlEncoded
     @POST("food/serv.php")
-    public Call<ArrayList<Food>> register(@Field("method")String method, @Field("keyword")String keyword);
+    public Call<String> register(@Field("method")String method, @Field("type")String type,@Field("email")String email,@Field("pass")String pass,@Field("name")String name,@Field("mobile")String mobile);
 
 
 
