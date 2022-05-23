@@ -36,7 +36,7 @@ public class SimpleItem extends DrawerItemModel<SimpleItem.SimpleItemViewHolder>
     public void bindViewHolder(SimpleItemViewHolder holder) {
 
         holder.bind(icon,title);
-        holder.binding.optionText.setText(isChecked? selectedItemTextTint : normalItemTextTint);
+        holder.binding.optionText.setTextColor(isChecked ? selectedItemTextTint : normalItemTextTint);
 
     }
 

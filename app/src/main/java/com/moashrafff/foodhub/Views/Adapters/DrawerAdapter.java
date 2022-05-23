@@ -99,6 +99,7 @@ public class DrawerAdapter extends RecyclerView.Adapter<DrawerAdapter.DrawerView
 
         public DrawerViewHolder(@NonNull View itemView) {
             super(itemView);
+            itemView.setOnClickListener(this);
         }
 
         @Override

@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -30,7 +31,7 @@ import com.moashrafff.foodhub.Views.Pages.c_Home.RestaurantFoodSearchFragment;
 import com.moashrafff.foodhub.Views.Pages.c_Home.RestaurantProfileFragment;
 import com.moashrafff.foodhub.databinding.FragmentHomeScreenBinding;
 
-public class HomeFragment extends Fragment implements HomeRestaurantAdapter.onItemClickListener,HomeFoodAdapter.onFoodClickListener,HomeCategoriesAdapter.onItemClickListener {
+public class HomeFragment extends Fragment implements HomeRestaurantAdapter.onItemClickListener,HomeFoodAdapter.onFoodClickListener,HomeCategoriesAdapter.onItemClickListener, View.OnClickListener {
 
     private static final String TAG = "HomeFragment";
 
@@ -39,6 +40,7 @@ public class HomeFragment extends Fragment implements HomeRestaurantAdapter.onIt
     private HomeCategoriesAdapter catAdapter;
     private HomeRestaurantAdapter resAdapter;
     private HomeFoodAdapter foodAdapter;
+    TextView tv;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -51,6 +53,7 @@ public class HomeFragment extends Fragment implements HomeRestaurantAdapter.onIt
         // Inflate the layout for this fragment
         binding = FragmentHomeScreenBinding.inflate(inflater,container,false);
         View view = binding.getRoot();
+        tv = getActivity().findViewById(R.id.toolbar_title);
         catAdapter = new HomeCategoriesAdapter(requireContext(),this);
         resAdapter = new HomeRestaurantAdapter(requireContext(),this);
         foodAdapter= new HomeFoodAdapter(requireContext(),this);
@@ -62,13 +65,7 @@ public class HomeFragment extends Fragment implements HomeRestaurantAdapter.onIt
         binding.popularLst.setLayoutManager(new LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL,false));
         binding.popularLst.setAdapter(foodAdapter);
 
-        binding.tvSearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                RestaurantFoodSearchFragment fragment = new RestaurantFoodSearchFragment();
-                getParentFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
-            }
-        });
+        binding.tvSearch.setOnClickListener(this);
         return view;
     }
 
@@ -97,6 +94,8 @@ public class HomeFragment extends Fragment implements HomeRestaurantAdapter.onIt
         Constants.setResDetailsId(restaurant.getId());
         RestaurantProfileFragment fragment = new RestaurantProfileFragment();
         getParentFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
+        tv.setText("Restaurant Profile");
+
 
     }
 
@@ -106,6 +105,7 @@ public class HomeFragment extends Fragment implements HomeRestaurantAdapter.onIt
         Constants.setFoodDetailsId(food.getId());
         FoodDetailsFragment fragment = new FoodDetailsFragment();
         getParentFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
+        tv.setText("Food Details");
 
     }
 
@@ -115,5 +115,17 @@ public class HomeFragment extends Fragment implements HomeRestaurantAdapter.onIt
         Constants.setCatId(category.getId());
         CategoryFragment fragment = new CategoryFragment();
         getParentFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
+        tv.setText("Category Details");
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.tvSearch:
+                RestaurantFoodSearchFragment fragment = new RestaurantFoodSearchFragment();
+                getParentFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
+                tv.setText("Search Food");
+                break;
+        }
     }
 }

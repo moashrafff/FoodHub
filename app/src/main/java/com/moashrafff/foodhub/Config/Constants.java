@@ -1,5 +1,7 @@
 package com.moashrafff.foodhub.Config;
 
+import android.net.Uri;
+
 public class Constants {
     public static String BaseUrl = "https://direct-app.net/";
     public static String ImageFolderUrl = "https://direct-app.net/food/";
@@ -29,6 +31,11 @@ public class Constants {
     public static final int POS_HELP = 6;
     public static final int POS_LOG_OUT = 7;
 
+    public static Uri USER_PROFILE_PIC;
+
+    public static void setUserProfilePic(Uri userProfilePic) {
+        USER_PROFILE_PIC = userProfilePic;
+    }
 
     //Registration_Constants
     public static final String REG_METHOD = "signup";

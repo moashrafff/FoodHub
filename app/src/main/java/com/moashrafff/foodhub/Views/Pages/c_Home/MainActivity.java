@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
 
     private SlidingRootNav slidingRootNav;
     ActivityHomeScreenBinding binding;
+    Toolbar toolbar;
 
     boolean doubleBackToExitPressedOnce = false;
 
@@ -53,15 +54,14 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
         getSupportFragmentManager().beginTransaction().replace(R.id.container, new HomeFragment()).commit();
         bottomNav();
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
+        binding.toolbarPic.setImageURI(Constants.USER_PROFILE_PIC);
+        binding.toolbarTitle.setText("Home");
 
 
         slidingRootNav = new SlidingRootNavBuilder(this)
-                .withRootViewScale(0.75f)
-                .withDragDistance(180)
-                .withRootViewElevation(25)
                 .withToolbarMenuToggle(toolbar)
                 .withMenuOpened(false)
                 .withContentClickableWhenMenuOpened(false)
@@ -149,16 +149,19 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
                 switch (i) {
                     case R.id.bottm_nav_dash_board:
                         fragment = new HomeFragment();
+                        binding.toolbarTitle.setText("Home");
                         break;
                     case R.id.shop_nav_dash_board:
                         fragment = new signUp();
+                        binding.toolbarTitle.setText("Cart");
                         break;
                     case R.id.food_det_dash_board:
                         fragment = new FoodDetailsFragment();
+                        binding.toolbarTitle.setText("Food Details");
                         break;
 
                 }
-                getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
+                showFragment(fragment);
             }
         });
     }
@@ -167,15 +170,26 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
     public void onItemSelected(int position) {
         Fragment fragment = null;
 
-
         switch (position){
             case Constants.POS_MY_PROFILE:
+                fragment = new MyProfileFragment();
+                binding.toolbarTitle.setText("My Profile");
+
+                break;
+            case Constants.POS_DEL_ADD:
                 fragment = new CartFragment();
+                binding.toolbarTitle.setText("Cart");
                 break;
         }
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
+        showFragment(fragment);
         slidingRootNav.closeMenu();
 
+    }
+
+    private void showFragment(Fragment fragment) {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.container, fragment)
+                .commit();
     }
 
 }

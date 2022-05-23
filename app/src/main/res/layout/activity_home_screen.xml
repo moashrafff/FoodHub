@@ -21,17 +21,14 @@
             >
 
 
-
-
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
-                app:titleTextColor="@color/black"
                 android:layout_centerInParent="true"
 
-                />
+                android:background="@color/white"
+                app:titleTextColor="@color/black" />
 
 
             <TextView
@@ -45,6 +42,7 @@
                 android:textSize="18dp"
                 android:layout_weight="1"
                 android:layout_centerInParent="true"
+                android:id="@+id/toolbar_title"
                 />
 
             <ImageView
@@ -52,7 +50,10 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_gravity="end"
-                android:src="@drawable/toolbar_icon" />
+                android:src="@drawable/toolbar_icon"
+                android:background="@drawable/profile_pic_shape"
+                android:id="@+id/toolbar_pic"
+                />
 
         </RelativeLayout>
 
