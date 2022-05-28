@@ -1,4 +1,4 @@
-package com.moashrafff.foodhub.Views.Pages.c_Home;
+package com.moashrafff.foodhub.Views.Pages.e_Search;
 
 import android.os.Bundle;
 
@@ -8,8 +8,6 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -25,7 +23,6 @@ import com.moashrafff.foodhub.R;
 import com.moashrafff.foodhub.Views.Adapters.FoodSearchAdapter;
 import com.moashrafff.foodhub.Views.Adapters.RestaurantSearchAdapter;
 import com.moashrafff.foodhub.Views.FoodViewModel;
-import com.moashrafff.foodhub.databinding.FragmentHomeScreenBinding;
 import com.moashrafff.foodhub.databinding.SearchScreenBinding;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.moashrafff.foodhub.Views;
+package com.moashrafff.foodhub.Views.Pages.Favourite;
 
 import android.os.Bundle;
 

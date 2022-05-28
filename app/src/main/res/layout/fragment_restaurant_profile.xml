@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Views.Pages.c_Home.RestaurantProfileFragment"
+    tools:context=".Views.Pages.d_Details.RestaurantProfileFragment"
     android:clipToPadding="false">
 
     <ScrollView

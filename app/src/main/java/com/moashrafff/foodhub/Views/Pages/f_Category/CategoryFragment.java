@@ -1,4 +1,4 @@
-package com.moashrafff.foodhub.Views.Pages.c_Home;
+package com.moashrafff.foodhub.Views.Pages.f_Category;
 
 import android.os.Bundle;
 
@@ -10,14 +10,11 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.moashrafff.foodhub.Data.Model.Category;
 import com.moashrafff.foodhub.Data.Model.Food;
-import com.moashrafff.foodhub.R;
 import com.moashrafff.foodhub.Views.Adapters.CategoryItemsAdapter;
 import com.moashrafff.foodhub.Views.FoodViewModel;
 import com.moashrafff.foodhub.databinding.CategoryScreenBinding;

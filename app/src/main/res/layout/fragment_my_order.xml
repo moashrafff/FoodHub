@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Views.Pages.Favourite.FavouriteFragment">
+    tools:context=".Views.Pages.j_Order.MyOrderFragment">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,7 +23,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_marginEnd="5dp"
-            android:text="Food Item"
+            android:text="Upcoming"
             android:textAllCaps="false"
             android:background="@drawable/login_btn_shape"
             android:textColor="@color/white"
@@ -34,7 +35,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_marginStart="5dp"
-            android:text="Restaurant"
+            android:text="History"
             android:textAllCaps="false"
             android:textColor="@color/btn_color"
             android:background="@drawable/links_btn_shape"
@@ -51,7 +52,7 @@
         android:layout_below="@+id/toggle_layout"
         android:layout_marginTop="10dp"
         android:clipToPadding="false"
-        tools:listitem="@layout/favourite_food_item" />
+        tools:listitem="@layout/order_history_item" />
 
 
 

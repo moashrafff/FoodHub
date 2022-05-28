@@ -1,4 +1,4 @@
-package com.moashrafff.foodhub.Views.Pages.c_Home;
+package com.moashrafff.foodhub.Views.Pages.i_Profile;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -19,8 +19,6 @@ import com.moashrafff.foodhub.Data.Model.User;
 import com.moashrafff.foodhub.R;
 import com.moashrafff.foodhub.Views.FoodViewModel;
 import com.moashrafff.foodhub.databinding.MyProfileScreenBinding;
-
-import java.net.URI;
 
 public class MyProfileFragment extends Fragment implements View.OnClickListener {
 

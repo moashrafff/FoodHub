@@ -1,4 +1,4 @@
-package com.moashrafff.foodhub.Views.Pages.c_Home;
+package com.moashrafff.foodhub.Views.Pages.d_Details;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
