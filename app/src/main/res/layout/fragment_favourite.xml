@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.FavouriteFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@drawable/search_food_linear_shape"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:layout_marginHorizontal="20dp"
+        android:id="@+id/toggle_layout"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/food_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="5dp"
+            android:text="Food Item"
+            android:textAllCaps="false"
+            android:background="@drawable/login_btn_shape"
+            android:textColor="@color/white"
+            android:gravity="center"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/res_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:text="Restaurant"
+            android:textAllCaps="false"
+            android:textColor="@color/btn_color"
+            android:background="@drawable/links_btn_shape"
+            android:gravity="center"
+            />
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFavourite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toggle_layout"
+        android:layout_marginTop="10dp"
+        android:clipToPadding="false"
+        tools:listitem="@layout/favourite_food_item" />
+
+
+
+</RelativeLayout>
