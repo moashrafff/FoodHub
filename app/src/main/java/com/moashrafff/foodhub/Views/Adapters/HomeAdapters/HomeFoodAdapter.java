@@ -1,4 +1,4 @@
-package com.moashrafff.foodhub.Views.Adapters;
+package com.moashrafff.foodhub.Views.Adapters.HomeAdapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.moashrafff.foodhub.Config.Constants;
 import com.moashrafff.foodhub.Data.Model.Food;
-import com.moashrafff.foodhub.Data.Model.Restaurant;
 import com.moashrafff.foodhub.R;
 import com.moashrafff.foodhub.databinding.PopularItemBinding;
 
@@ -73,7 +72,7 @@ public class HomeFoodAdapter extends RecyclerView.Adapter<HomeFoodAdapter.FoodVi
             binding.popularTitle.setText(model.getName());
             binding.poplarDis.setText(model.getDescription());
             binding.popularRating.setText(model.getRating());
-            binding.ratingsNumber.setText("("+model.getNumber_of_ratings()+")");
+            binding.popularNumber.setText("("+model.getNumber_of_ratings()+")");
         }
 
         @Override

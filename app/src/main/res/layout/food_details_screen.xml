@@ -455,9 +455,7 @@
                     android:drawableStart="@drawable/add_to_cart_icon"
                     android:gravity="center"
                     android:paddingHorizontal="10dp"
-                    android:text="ADD TO CART"
-
-                    />
+                    android:text="ADD TO CART" />
 
 
             </RelativeLayout>

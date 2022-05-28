@@ -1,13 +1,8 @@
 package com.moashrafff.foodhub.Views.Adapters;
 
-import android.transition.Slide;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.bumptech.glide.Glide;
-import com.google.android.material.slider.Slider;
-import com.moashrafff.foodhub.Config.Constants;
 import com.moashrafff.foodhub.Data.Model.Boarding;
 import com.moashrafff.foodhub.Data.Model.Restaurant;
 import com.moashrafff.foodhub.Data.Source.Local.SliderData;

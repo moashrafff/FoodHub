@@ -19,16 +19,12 @@ import com.moashrafff.foodhub.Config.Constants;
 import com.moashrafff.foodhub.Data.Model.Category;
 import com.moashrafff.foodhub.Data.Model.Food;
 import com.moashrafff.foodhub.Data.Model.Restaurant;
-import com.moashrafff.foodhub.Data.Model.RestaurantDetailsRoot;
 import com.moashrafff.foodhub.Data.Model.Root;
 import com.moashrafff.foodhub.R;
-import com.moashrafff.foodhub.Views.Adapters.HomeCategoriesAdapter;
-import com.moashrafff.foodhub.Views.Adapters.HomeFoodAdapter;
-import com.moashrafff.foodhub.Views.Adapters.HomeRestaurantAdapter;
+import com.moashrafff.foodhub.Views.Adapters.HomeAdapters.HomeCategoriesAdapter;
+import com.moashrafff.foodhub.Views.Adapters.HomeAdapters.HomeFoodAdapter;
+import com.moashrafff.foodhub.Views.Adapters.HomeAdapters.HomeRestaurantAdapter;
 import com.moashrafff.foodhub.Views.FoodViewModel;
-import com.moashrafff.foodhub.Views.Pages.c_Home.FoodDetailsFragment;
-import com.moashrafff.foodhub.Views.Pages.c_Home.RestaurantFoodSearchFragment;
-import com.moashrafff.foodhub.Views.Pages.c_Home.RestaurantProfileFragment;
 import com.moashrafff.foodhub.databinding.FragmentHomeScreenBinding;
 
 public class HomeFragment extends Fragment implements HomeRestaurantAdapter.onItemClickListener,HomeFoodAdapter.onFoodClickListener,HomeCategoriesAdapter.onItemClickListener, View.OnClickListener {

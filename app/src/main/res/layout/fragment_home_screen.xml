@@ -20,14 +20,14 @@
 
 
             <TextView
-
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="5dp"
                 android:fontFamily="@font/sofia_bold"
-                android:text="What would you like \nto order"
-                android:textColor="@color/black"
-                android:textSize="36.5dp" />
+                android:text="What would you like\nto order"
+                android:textColor="#1A1D26"
+                android:textSize="20dp" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -91,6 +91,7 @@
                 android:clipToPadding="false"
                 android:paddingHorizontal="10dp"
                 tools:listitem="@layout/categories_item"
+                android:layout_marginVertical="5dp"
 
                 />
 
@@ -111,10 +112,23 @@
                 android:layout_height="wrap_content"
                 android:clipToPadding="false"
                 android:paddingStart="10dp"
-                tools:listitem="@layout/restaurant_item"
-
-
+                tools:listitem="@layout/item_food_item"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+
+                android:fontFamily="@font/sofia_semi_bold"
+                android:text="Popular items"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                />
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/popular_lst"
@@ -122,7 +136,12 @@
                 android:layout_height="wrap_content"
                 android:clipToPadding="false"
                 android:paddingStart="10dp"
-                tools:listitem="@layout/popular_item" />
+                tools:listitem="@layout/popular_item"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+                android:layout_marginVertical="10dp"
+                />
 
 
         </LinearLayout>

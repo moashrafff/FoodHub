@@ -1,4 +1,4 @@
-package com.moashrafff.foodhub.Views.Adapters;
+package com.moashrafff.foodhub.Views.Adapters.HomeAdapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -12,10 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.moashrafff.foodhub.Config.Constants;
-import com.moashrafff.foodhub.Data.Model.Category;
 import com.moashrafff.foodhub.Data.Model.Restaurant;
 import com.moashrafff.foodhub.R;
-import com.moashrafff.foodhub.databinding.CategoriesItemBinding;
 import com.moashrafff.foodhub.databinding.ItemFoodItemBinding;
 
 import java.util.ArrayList;
@@ -77,7 +75,8 @@ public class HomeRestaurantAdapter extends RecyclerView.Adapter<HomeRestaurantAd
             if (!model.getVerified().equals("1")){
                 binding.lblName.setCompoundDrawables(null,null,null,null);
             }
-            binding.imgRates.setText(model.getRating());
+            binding.tvRate.setText(model.getRating());
+            binding.tvNumberRate.setText(model.getNumber_of_ratings());
             binding.lblName.setText(model.getName());
             binding.lblName1.setText(model.getDelivery());
             binding.lblName2.setText(model.getDelivery_time());

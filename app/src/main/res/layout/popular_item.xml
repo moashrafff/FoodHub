@@ -7,6 +7,7 @@
     android:layout_marginEnd="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="10dp"
+    android:layout_marginVertical="5dp"
     >
 
     <RelativeLayout
@@ -21,58 +22,79 @@
             android:src="@drawable/popular_img"
             app:riv_corner_radius="15dp" />
 
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:id="@+id/popular_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/auth_shape"
+            android:fontFamily="@font/sofia_semi_bold"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="3dp"
+            android:scaleType="centerCrop"
+            android:text="10.35"
+            android:textColor="@color/black"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/popular_price"
+            android:layout_alignTop="@id/popular_price"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="12dp"
+            android:text="$"
+            android:textColor="@color/btn_color"
+            android:textSize="7dp" />
+
+
+    </RelativeLayout>
+
+
         <LinearLayout
-            android:layout_width="58dp"
-            android:layout_height="28dp"
-            android:layout_marginStart="10dp"
+            android:id="@+id/btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
-            android:background="@drawable/btn_style"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/popular_price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/sofia_regular"
-                android:text="4.5"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                android:gravity="center"
-                android:layout_gravity="center"
-                />
-
-
-        </LinearLayout>
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="15dp"
-            android:padding="1dp"
-            android:layout_marginEnd="10dp"
-            android:src="@drawable/like_icon" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="24dp"
-            android:layout_centerVertical="true"
-            android:background="@drawable/btn_style"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:translationY="30dp"
-            android:layout_marginStart="10dp"
-            >
+            android:background="@drawable/food_item_like_shape"
+            android:gravity="center">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginHorizontal="3dp"
-                android:src="@drawable/star" />
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/like_icon"
+
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/popular_img"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="-20dp"
+            android:background="@drawable/btn_style"
+            android:elevation="6dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="8dp">
 
             <TextView
                 android:id="@+id/popular_rating"
@@ -81,44 +103,59 @@
                 android:fontFamily="@font/sofia_semi_bold"
                 android:text="4.5"
                 android:textColor="@color/black"
-                android:layout_marginEnd="3dp"
-                />
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:src="@drawable/star" />
 
             <TextView
-                android:id="@+id/ratings_number"
+                android:id="@+id/popular_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="(25)"
-                android:textSize="8dp"
-                android:layout_marginEnd="3dp"
-                />
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:fontFamily="@font/sofia_regular"
+                android:text="(25+)"
+                android:textColor="#9796A1"
+                android:textSize="10sp" />
+        </LinearLayout>
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/popular_img"
+            >
+
+            <TextView
+                android:id="@+id/popular_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/sofia_semi_bold"
+                android:text="Salmon Salad"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+            <TextView
+
+                android:id="@+id/poplar_dis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/sofia_light"
+                android:text="Baked Salmon Fish"
+                android:textSize="12dp" />
 
         </LinearLayout>
 
 
-        <TextView
-            android:id="@+id/popular_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/popular_img"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/sofia_semi_bold"
-            android:text="Salmon Salad"
-            android:textColor="@color/black"
-            android:textSize="15dp" />
-
-        <TextView
-
-            android:id="@+id/poplar_dis"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/popular_title"
-            android:layout_marginStart="10dp"
-            android:fontFamily="@font/sofia_light"
-            android:text="Baked Salmon Fish"
-            android:textSize="12dp" />
 
     </RelativeLayout>
 
