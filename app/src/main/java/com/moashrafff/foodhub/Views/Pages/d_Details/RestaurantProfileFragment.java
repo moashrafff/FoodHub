@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.moashrafff.foodhub.Config.Constants;
 import com.moashrafff.foodhub.Data.Model.RestaurantDetailsRoot;
-import com.moashrafff.foodhub.Views.Adapters.RestaurantDetailsFeaturedAdapter;
+import com.moashrafff.foodhub.Views.Adapters.FoodResAdapters.RestaurantDetailsFeaturedAdapter;
 import com.moashrafff.foodhub.Views.FoodViewModel;
 import com.moashrafff.foodhub.databinding.FragmentRestaurantProfileBinding;
 

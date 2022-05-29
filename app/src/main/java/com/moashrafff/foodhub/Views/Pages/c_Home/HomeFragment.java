@@ -25,7 +25,7 @@ import com.moashrafff.foodhub.Views.Adapters.HomeAdapters.HomeCategoriesAdapter;
 import com.moashrafff.foodhub.Views.Adapters.HomeAdapters.HomeFoodAdapter;
 import com.moashrafff.foodhub.Views.Adapters.HomeAdapters.HomeRestaurantAdapter;
 import com.moashrafff.foodhub.Views.FoodViewModel;
-import com.moashrafff.foodhub.Views.Pages.f_Category.CategoryFragment;
+import com.moashrafff.foodhub.Views.Pages.d_Details.CategoryFragment;
 import com.moashrafff.foodhub.Views.Pages.d_Details.FoodDetailsFragment;
 import com.moashrafff.foodhub.Views.Pages.d_Details.RestaurantProfileFragment;
 import com.moashrafff.foodhub.Views.Pages.e_Search.RestaurantFoodSearchFragment;

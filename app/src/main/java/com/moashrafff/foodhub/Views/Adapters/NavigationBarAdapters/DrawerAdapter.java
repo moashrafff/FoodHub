@@ -1,4 +1,4 @@
-package com.moashrafff.foodhub.Views.Adapters;
+package com.moashrafff.foodhub.Views.Adapters.NavigationBarAdapters;
 
 import android.util.SparseArray;
 import android.view.View;

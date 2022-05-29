@@ -2,7 +2,7 @@ package com.moashrafff.foodhub.Data.Model;
 
 import android.view.ViewGroup;
 
-import com.moashrafff.foodhub.Views.Adapters.DrawerAdapter;
+import com.moashrafff.foodhub.Views.Adapters.NavigationBarAdapters.DrawerAdapter;
 
 public abstract class DrawerItemModel<T extends DrawerAdapter.DrawerViewHolder> {
 

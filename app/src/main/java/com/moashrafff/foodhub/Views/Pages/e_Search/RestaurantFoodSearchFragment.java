@@ -20,8 +20,8 @@ import com.moashrafff.foodhub.Config.Constants;
 import com.moashrafff.foodhub.Data.Model.Food;
 import com.moashrafff.foodhub.Data.Model.Restaurant;
 import com.moashrafff.foodhub.R;
-import com.moashrafff.foodhub.Views.Adapters.FoodSearchAdapter;
-import com.moashrafff.foodhub.Views.Adapters.RestaurantSearchAdapter;
+import com.moashrafff.foodhub.Views.Adapters.SearchAdapters.FoodSearchAdapter;
+import com.moashrafff.foodhub.Views.Adapters.SearchAdapters.RestaurantSearchAdapter;
 import com.moashrafff.foodhub.Views.FoodViewModel;
 import com.moashrafff.foodhub.databinding.SearchScreenBinding;
 

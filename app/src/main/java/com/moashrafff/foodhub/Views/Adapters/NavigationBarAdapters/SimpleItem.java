@@ -1,4 +1,4 @@
-package com.moashrafff.foodhub.Views.Adapters;
+package com.moashrafff.foodhub.Views.Adapters.NavigationBarAdapters;
 
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;

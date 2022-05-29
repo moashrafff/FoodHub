@@ -6,8 +6,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 
-import com.moashrafff.foodhub.Config.Constants;
-import com.moashrafff.foodhub.Views.Adapters.DrawerAdapter;
+import com.moashrafff.foodhub.Views.Adapters.NavigationBarAdapters.DrawerAdapter;
 
 public class SpaceItem extends DrawerItemModel<SpaceItem.ViewHolder>{
 

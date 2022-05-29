@@ -1,10 +1,9 @@
-package com.moashrafff.foodhub.Views.Adapters;
+package com.moashrafff.foodhub.Views.Adapters.SliderAdapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.moashrafff.foodhub.Data.Model.Boarding;
-import com.moashrafff.foodhub.Data.Model.Restaurant;
 import com.moashrafff.foodhub.Data.Source.Local.SliderData;
 import com.moashrafff.foodhub.R;
 import com.moashrafff.foodhub.databinding.BoardItemBinding;

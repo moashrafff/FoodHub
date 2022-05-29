@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.moashrafff.foodhub.R;
-import com.moashrafff.foodhub.Views.Adapters.SliderAdapter;
+import com.moashrafff.foodhub.Views.Adapters.SliderAdapters.SliderAdapter;
 import com.moashrafff.foodhub.Views.Pages.b_Account.ActivityAuth;
 import com.moashrafff.foodhub.databinding.ActivityOnBoardingScreenBinding;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;

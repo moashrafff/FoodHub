@@ -1,4 +1,4 @@
-package com.moashrafff.foodhub.Views.Adapters;
+package com.moashrafff.foodhub.Views.Adapters.FoodResAdapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.moashrafff.foodhub.Config.Constants;
-import com.moashrafff.foodhub.Data.Model.Category;
 import com.moashrafff.foodhub.Data.Model.Food;
 import com.moashrafff.foodhub.R;
 import com.moashrafff.foodhub.databinding.CatItemBinding;

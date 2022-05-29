@@ -1,4 +1,4 @@
-package com.moashrafff.foodhub.Views.Adapters;
+package com.moashrafff.foodhub.Views.Adapters.FoodResAdapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;

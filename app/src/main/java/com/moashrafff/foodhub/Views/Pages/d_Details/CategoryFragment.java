@@ -1,4 +1,4 @@
-package com.moashrafff.foodhub.Views.Pages.f_Category;
+package com.moashrafff.foodhub.Views.Pages.d_Details;
 
 import android.os.Bundle;
 
@@ -15,7 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.moashrafff.foodhub.Data.Model.Food;
-import com.moashrafff.foodhub.Views.Adapters.CategoryItemsAdapter;
+import com.moashrafff.foodhub.Views.Adapters.FoodResAdapters.CategoryItemsAdapter;
 import com.moashrafff.foodhub.Views.FoodViewModel;
 import com.moashrafff.foodhub.databinding.CategoryScreenBinding;
 
