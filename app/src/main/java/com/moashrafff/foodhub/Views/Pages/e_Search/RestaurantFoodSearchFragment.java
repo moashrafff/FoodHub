@@ -87,6 +87,7 @@ public class RestaurantFoodSearchFragment extends Fragment implements View.OnCli
 
         binding.resBtn.setOnClickListener(this);
         binding.foodBtn.setOnClickListener(this);
+        binding.ivFilter.setOnClickListener(this);
 
 
 
@@ -129,8 +130,18 @@ public class RestaurantFoodSearchFragment extends Fragment implements View.OnCli
                 binding.searchRv.setAdapter(foodAdapter);
                 resAdapter.notifyDataSetChanged();
                 binding.tvSearch.setText("");
+                break;
 
+            case R.id.ivFilter:
+                showFragment(new FilterFragment());
                 break;
         }
+    }
+
+    private void showFragment(Fragment fragment) {
+        getParentFragmentManager().beginTransaction()
+                .replace(R.id.container, fragment)
+                .addToBackStack(null)
+                .commit();
     }
 }

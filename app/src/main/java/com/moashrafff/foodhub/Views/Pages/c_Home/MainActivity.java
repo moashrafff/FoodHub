@@ -21,9 +21,16 @@ import com.moashrafff.foodhub.Data.Model.SpaceItem;
 import com.moashrafff.foodhub.R;
 import com.moashrafff.foodhub.Views.Adapters.NavigationBarAdapters.DrawerAdapter;
 import com.moashrafff.foodhub.Views.Adapters.NavigationBarAdapters.SimpleItem;
+import com.moashrafff.foodhub.Views.Pages.ContactUs.ContactUsFragment;
+import com.moashrafff.foodhub.Views.Pages.Favourite.FavouriteFragment;
+import com.moashrafff.foodhub.Views.Pages.Helps.HelpsFragment;
+import com.moashrafff.foodhub.Views.Pages.Review.ReviewFragment;
+import com.moashrafff.foodhub.Views.Pages.Settings.SettingsFragment;
 import com.moashrafff.foodhub.Views.Pages.g_Cart.CartFragment;
 import com.moashrafff.foodhub.Views.Pages.d_Details.FoodDetailsFragment;
 import com.moashrafff.foodhub.Views.Pages.i_Profile.MyProfileFragment;
+import com.moashrafff.foodhub.Views.Pages.j_Order.MyOrderFragment;
+import com.moashrafff.foodhub.Views.Pages.l_Payment.PaymentFragment;
 import com.moashrafff.foodhub.databinding.ActivityHomeScreenBinding;
 import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
@@ -160,7 +167,14 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
                         fragment = new FoodDetailsFragment();
                         binding.toolbarTitle.setText("Food Details");
                         break;
-
+                    case R.id.fav_nav_dash_board:
+                        fragment = new FavouriteFragment();
+                        binding.toolbarTitle.setText("Favourites");
+                        break;
+                    case R.id.loc_nav_dash_board:
+                        fragment = new ReviewFragment();
+                        binding.toolbarTitle.setText("Favourites");
+                        break;
                 }
                 showFragment(fragment);
             }
@@ -175,11 +189,30 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
             case Constants.POS_MY_PROFILE:
                 fragment = new MyProfileFragment();
                 binding.toolbarTitle.setText("My Profile");
-
                 break;
             case Constants.POS_DEL_ADD:
                 fragment = new CartFragment();
                 binding.toolbarTitle.setText("Cart");
+                break;
+            case Constants.POS_CLOSE:
+                fragment = new MyOrderFragment();
+                binding.toolbarTitle.setText("My Order");
+                break;
+            case Constants.POS_PAY_MET:
+                fragment = new PaymentFragment();
+                binding.toolbarTitle.setText("Payment");
+                break;
+            case Constants.POS_SET:
+                fragment = new SettingsFragment();
+                binding.toolbarTitle.setText("Settings");
+                break;
+            case Constants.POS_HELP:
+                fragment = new HelpsFragment();
+                binding.toolbarTitle.setText("Helps & FAQs");
+                break;
+            case Constants.POS_CONTACT_US:
+                fragment = new ContactUsFragment();
+                binding.toolbarTitle.setText("Contact Us");
                 break;
         }
         showFragment(fragment);

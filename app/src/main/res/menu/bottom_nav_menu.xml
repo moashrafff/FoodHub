@@ -23,7 +23,7 @@
         app:cnb_backgroundColor="@color/btn_color"
         />
     <item android:id="@+id/food_det_dash_board"
-        android:title="Favourite"
+        android:title="Notification"
         android:icon="@drawable/ring_icon"
         app:cnb_backgroundColor="@color/btn_color"
         />
