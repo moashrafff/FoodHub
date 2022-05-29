@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Views.Pages.e_Search.FilterFragment"
+
+    >
+
+    <include layout="@layout/main_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/filter_header"
+
+        />
+
+    <TextView
+        android:id="@+id/c_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/filter_header"
+        android:layout_marginHorizontal="15dp"
+        android:fontFamily="@font/sofia_semi_bold"
+        android:text="Cuisines"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <nl.bryanderidder.themedtogglebuttongroup.ThemedToggleButtonGroup
+        android:id="@+id/cards"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:elevation="4dp"
+        android:layout_below="@id/c_tv"
+        app:flexWrap="wrap"
+        android:layout_marginHorizontal="10dp"
+        >
+
+
+        <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+            android:id="@+id/card1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:elevation="50dp"
+            app:toggle_btnCornerRadius="30dp"
+            app:toggle_iconGravity="center_vertical"
+            app:toggle_iconPaddingRight="20dp"
+            app:toggle_iconPaddingVertical="20dp"
+            app:toggle_selectedBackgroundColor="@color/btn_color"
+            app:toggle_selectedTextColor="@android:color/white"
+            app:toggle_text="Fast Food"
+            app:toggle_textGravity="end|center_vertical"
+            app:toggle_textSize="12sp" />
+
+        <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+            android:id="@+id/card2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+
+            app:toggle_btnCornerRadius="30dp"
+            app:toggle_iconGravity="center_vertical"
+            app:toggle_iconPaddingRight="20dp"
+            app:toggle_iconPaddingVertical="20dp"
+            app:toggle_selectedBackgroundColor="@color/btn_color"
+            app:toggle_selectedTextColor="@android:color/white"
+            app:toggle_text="Breakfast"
+            app:toggle_textGravity="end|center_vertical"
+            app:toggle_textSize="12sp" />
+
+        <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+            android:id="@+id/card3"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            app:toggle_btnCornerRadius="30dp"
+
+            app:toggle_iconGravity="center_vertical"
+            app:toggle_iconPaddingRight="20dp"
+            app:toggle_iconPaddingVertical="20dp"
+            app:toggle_selectedBackgroundColor="@color/btn_color"
+            app:toggle_selectedTextColor="@android:color/white"
+            app:toggle_text="Aisa"
+            app:toggle_textGravity="end|center_vertical"
+            app:toggle_textSize="12sp" />
+
+        <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+            android:id="@+id/card4"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            app:toggle_btnCornerRadius="30dp"
+
+            app:toggle_iconGravity="center_vertical"
+            app:toggle_iconPaddingRight="20dp"
+            app:toggle_iconPaddingVertical="20dp"
+            app:toggle_selectedBackgroundColor="@color/btn_color"
+            app:toggle_selectedTextColor="@android:color/white"
+            app:toggle_text="Mexican"
+            app:toggle_textGravity="end|center_vertical"
+            app:toggle_textSize="12sp" />
+
+        <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+            android:id="@+id/card5"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            app:toggle_btnCornerRadius="30dp"
+
+            app:toggle_iconGravity="center_vertical"
+            app:toggle_iconPaddingRight="20dp"
+            app:toggle_iconPaddingVertical="20dp"
+            app:toggle_selectedBackgroundColor="@color/btn_color"
+            app:toggle_selectedTextColor="@android:color/white"
+            app:toggle_text="Pizza"
+            app:toggle_textGravity="end|center_vertical"
+            app:toggle_textSize="12sp" />
+
+        <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+            android:id="@+id/card6"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            app:toggle_btnCornerRadius="30dp"
+            app:toggle_iconGravity="center_vertical"
+            app:toggle_iconPaddingRight="20dp"
+            app:toggle_iconPaddingVertical="20dp"
+            app:toggle_selectedBackgroundColor="@color/btn_color"
+            app:toggle_selectedTextColor="@android:color/white"
+            app:toggle_text="Donat"
+            app:toggle_textGravity="end|center_vertical"
+            app:toggle_textSize="12sp" />
+
+
+    </nl.bryanderidder.themedtogglebuttongroup.ThemedToggleButtonGroup>
+
+
+</RelativeLayout>

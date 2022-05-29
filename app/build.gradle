@@ -82,6 +82,9 @@ dependencies {
     //SliderView
     implementation 'com.github.smarteist:autoimageslider:1.4.0-appcompat'
 
+    //Toggle Button
+    implementation 'nl.bryanderidder:themed-toggle-button-group:1.4.1'
+
 
 
 
